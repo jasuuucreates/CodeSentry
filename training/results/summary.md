@@ -1,0 +1,46 @@
+# CodeSentry - training results
+
+Generated 2026-10-27T06:51:59+00:00 from `dataset/labels.json`: 290 labelled pairs (120 plagiarised, 170 not).
+
+Validation: grouped 5-fold cross-validation by assignment problem (2 problems per fold); every pair below is scored by a model that never saw its problem during training.
+
+| Method | Precision | Recall | F1 | Accuracy | AUC |
+|---|---|---|---|---|---|
+| Plain text | 1.000 | 0.575 | 0.730 | 0.824 | 0.804 |
+| TF-IDF cosine | 0.471 | 0.892 | 0.617 | 0.541 | 0.843 |
+| Token winnowing | 1.000 | 0.967 | 0.983 | 0.986 | 1.000 |
+| AST structure | 0.992 | 1.000 | 0.996 | 0.997 | 1.000 |
+| Hybrid (default weights) | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
+| Calibrated hybrid (trained, CV) | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
+| Logistic regression (trained, CV) | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
+
+Untrained methods use the fixed threshold 0.50.
+
+## Per fold
+
+| Fold | Test problems | Train pairs | Test pairs | Learned w_token | Learned threshold | Calibrated F1 | LogReg F1 |
+|---|---|---|---|---|---|---|---|
+| 1 | p01_grade_statistics, p02_matrix_operations | 216 | 74 | 0.70 | 0.42 | 1.000 | 1.000 |
+| 2 | p03_prime_numbers, p04_string_analysis | 216 | 66 | 0.90 | 0.37 | 1.000 | 1.000 |
+| 3 | p05_bank_account, p06_sort_and_search | 216 | 58 | 0.85 | 0.38 | 1.000 | 1.000 |
+| 4 | p07_bracket_checker, p08_base_conversion | 216 | 50 | 0.90 | 0.37 | 1.000 | 1.000 |
+| 5 | p09_inventory_billing, p10_temperature_series | 216 | 42 | 0.95 | 0.36 | 1.000 | 1.000 |
+
+## Final trained settings used by the web app (`engine/trained_config.json`)
+
+* w_token = 0.9, w_structure = 0.1
+* Moderate verdict from score 0.37 (learned boundary, margin 0.113), High verdict from score 0.54 (reached by 95% of the known copies)
+
+## Logistic regression coefficients (standardised features)
+
+| Feature | Weight |
+|---|---|
+| containment | +1.397 |
+| subtree | +1.259 |
+| token | +1.129 |
+| structure | +0.885 |
+| ted | +0.476 |
+| text | +0.225 |
+| tfidf | +0.058 |
+| length_ratio | -0.013 |
+| (bias) | +0.024 |

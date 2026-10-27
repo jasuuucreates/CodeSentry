@@ -1,0 +1,2325 @@
+{
+  "version": 1,
+  "pairs": [
+    {
+      "a": "generated/c/p01_grade_statistics/original.c",
+      "b": "generated/c/p01_grade_statistics/variant_rename.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p01_grade_statistics",
+      "category": "rename"
+    },
+    {
+      "a": "generated/c/p01_grade_statistics/original.c",
+      "b": "generated/c/p01_grade_statistics/variant_comments_format.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p01_grade_statistics",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/c/p01_grade_statistics/original.c",
+      "b": "generated/c/p01_grade_statistics/variant_reorder.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p01_grade_statistics",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/c/p01_grade_statistics/original.c",
+      "b": "generated/c/p01_grade_statistics/variant_loop_swap.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p01_grade_statistics",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/c/p01_grade_statistics/original.c",
+      "b": "generated/c/p01_grade_statistics/variant_dead_code.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p01_grade_statistics",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/c/p01_grade_statistics/original.c",
+      "b": "generated/c/p01_grade_statistics/variant_combined.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p01_grade_statistics",
+      "category": "combined"
+    },
+    {
+      "a": "generated/c/p01_grade_statistics/original.c",
+      "b": "generated/c/p01_grade_statistics/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p01_grade_statistics",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p01_grade_statistics/original.c",
+      "b": "generated/c/p01_grade_statistics/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p01_grade_statistics",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p01_grade_statistics/independent_1.c",
+      "b": "generated/c/p01_grade_statistics/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p01_grade_statistics",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p01_grade_statistics/variant_combined.c",
+      "b": "generated/c/p01_grade_statistics/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p01_grade_statistics",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/c/p02_matrix_operations/original.c",
+      "b": "generated/c/p02_matrix_operations/variant_rename.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p02_matrix_operations",
+      "category": "rename"
+    },
+    {
+      "a": "generated/c/p02_matrix_operations/original.c",
+      "b": "generated/c/p02_matrix_operations/variant_comments_format.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p02_matrix_operations",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/c/p02_matrix_operations/original.c",
+      "b": "generated/c/p02_matrix_operations/variant_reorder.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p02_matrix_operations",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/c/p02_matrix_operations/original.c",
+      "b": "generated/c/p02_matrix_operations/variant_loop_swap.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p02_matrix_operations",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/c/p02_matrix_operations/original.c",
+      "b": "generated/c/p02_matrix_operations/variant_dead_code.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p02_matrix_operations",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/c/p02_matrix_operations/original.c",
+      "b": "generated/c/p02_matrix_operations/variant_combined.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p02_matrix_operations",
+      "category": "combined"
+    },
+    {
+      "a": "generated/c/p02_matrix_operations/original.c",
+      "b": "generated/c/p02_matrix_operations/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p02_matrix_operations",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p02_matrix_operations/original.c",
+      "b": "generated/c/p02_matrix_operations/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p02_matrix_operations",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p02_matrix_operations/independent_1.c",
+      "b": "generated/c/p02_matrix_operations/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p02_matrix_operations",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p02_matrix_operations/variant_combined.c",
+      "b": "generated/c/p02_matrix_operations/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p02_matrix_operations",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/c/p03_prime_numbers/original.c",
+      "b": "generated/c/p03_prime_numbers/variant_rename.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p03_prime_numbers",
+      "category": "rename"
+    },
+    {
+      "a": "generated/c/p03_prime_numbers/original.c",
+      "b": "generated/c/p03_prime_numbers/variant_comments_format.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p03_prime_numbers",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/c/p03_prime_numbers/original.c",
+      "b": "generated/c/p03_prime_numbers/variant_reorder.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p03_prime_numbers",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/c/p03_prime_numbers/original.c",
+      "b": "generated/c/p03_prime_numbers/variant_loop_swap.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p03_prime_numbers",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/c/p03_prime_numbers/original.c",
+      "b": "generated/c/p03_prime_numbers/variant_dead_code.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p03_prime_numbers",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/c/p03_prime_numbers/original.c",
+      "b": "generated/c/p03_prime_numbers/variant_combined.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p03_prime_numbers",
+      "category": "combined"
+    },
+    {
+      "a": "generated/c/p03_prime_numbers/original.c",
+      "b": "generated/c/p03_prime_numbers/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p03_prime_numbers",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p03_prime_numbers/original.c",
+      "b": "generated/c/p03_prime_numbers/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p03_prime_numbers",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p03_prime_numbers/independent_1.c",
+      "b": "generated/c/p03_prime_numbers/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p03_prime_numbers",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p03_prime_numbers/variant_combined.c",
+      "b": "generated/c/p03_prime_numbers/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p03_prime_numbers",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/c/p04_string_analysis/original.c",
+      "b": "generated/c/p04_string_analysis/variant_rename.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p04_string_analysis",
+      "category": "rename"
+    },
+    {
+      "a": "generated/c/p04_string_analysis/original.c",
+      "b": "generated/c/p04_string_analysis/variant_comments_format.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p04_string_analysis",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/c/p04_string_analysis/original.c",
+      "b": "generated/c/p04_string_analysis/variant_reorder.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p04_string_analysis",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/c/p04_string_analysis/original.c",
+      "b": "generated/c/p04_string_analysis/variant_loop_swap.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p04_string_analysis",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/c/p04_string_analysis/original.c",
+      "b": "generated/c/p04_string_analysis/variant_dead_code.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p04_string_analysis",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/c/p04_string_analysis/original.c",
+      "b": "generated/c/p04_string_analysis/variant_combined.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p04_string_analysis",
+      "category": "combined"
+    },
+    {
+      "a": "generated/c/p04_string_analysis/original.c",
+      "b": "generated/c/p04_string_analysis/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p04_string_analysis",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p04_string_analysis/original.c",
+      "b": "generated/c/p04_string_analysis/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p04_string_analysis",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p04_string_analysis/independent_1.c",
+      "b": "generated/c/p04_string_analysis/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p04_string_analysis",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p04_string_analysis/variant_combined.c",
+      "b": "generated/c/p04_string_analysis/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p04_string_analysis",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/c/p05_bank_account/original.c",
+      "b": "generated/c/p05_bank_account/variant_rename.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p05_bank_account",
+      "category": "rename"
+    },
+    {
+      "a": "generated/c/p05_bank_account/original.c",
+      "b": "generated/c/p05_bank_account/variant_comments_format.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p05_bank_account",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/c/p05_bank_account/original.c",
+      "b": "generated/c/p05_bank_account/variant_reorder.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p05_bank_account",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/c/p05_bank_account/original.c",
+      "b": "generated/c/p05_bank_account/variant_loop_swap.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p05_bank_account",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/c/p05_bank_account/original.c",
+      "b": "generated/c/p05_bank_account/variant_dead_code.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p05_bank_account",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/c/p05_bank_account/original.c",
+      "b": "generated/c/p05_bank_account/variant_combined.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p05_bank_account",
+      "category": "combined"
+    },
+    {
+      "a": "generated/c/p05_bank_account/original.c",
+      "b": "generated/c/p05_bank_account/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p05_bank_account",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p05_bank_account/original.c",
+      "b": "generated/c/p05_bank_account/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p05_bank_account",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p05_bank_account/independent_1.c",
+      "b": "generated/c/p05_bank_account/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p05_bank_account",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p05_bank_account/variant_combined.c",
+      "b": "generated/c/p05_bank_account/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p05_bank_account",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/c/p06_sort_and_search/original.c",
+      "b": "generated/c/p06_sort_and_search/variant_rename.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p06_sort_and_search",
+      "category": "rename"
+    },
+    {
+      "a": "generated/c/p06_sort_and_search/original.c",
+      "b": "generated/c/p06_sort_and_search/variant_comments_format.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p06_sort_and_search",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/c/p06_sort_and_search/original.c",
+      "b": "generated/c/p06_sort_and_search/variant_reorder.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p06_sort_and_search",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/c/p06_sort_and_search/original.c",
+      "b": "generated/c/p06_sort_and_search/variant_loop_swap.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p06_sort_and_search",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/c/p06_sort_and_search/original.c",
+      "b": "generated/c/p06_sort_and_search/variant_dead_code.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p06_sort_and_search",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/c/p06_sort_and_search/original.c",
+      "b": "generated/c/p06_sort_and_search/variant_combined.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p06_sort_and_search",
+      "category": "combined"
+    },
+    {
+      "a": "generated/c/p06_sort_and_search/original.c",
+      "b": "generated/c/p06_sort_and_search/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p06_sort_and_search",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p06_sort_and_search/original.c",
+      "b": "generated/c/p06_sort_and_search/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p06_sort_and_search",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p06_sort_and_search/independent_1.c",
+      "b": "generated/c/p06_sort_and_search/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p06_sort_and_search",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p06_sort_and_search/variant_combined.c",
+      "b": "generated/c/p06_sort_and_search/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p06_sort_and_search",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/c/p07_bracket_checker/original.c",
+      "b": "generated/c/p07_bracket_checker/variant_rename.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p07_bracket_checker",
+      "category": "rename"
+    },
+    {
+      "a": "generated/c/p07_bracket_checker/original.c",
+      "b": "generated/c/p07_bracket_checker/variant_comments_format.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p07_bracket_checker",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/c/p07_bracket_checker/original.c",
+      "b": "generated/c/p07_bracket_checker/variant_reorder.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p07_bracket_checker",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/c/p07_bracket_checker/original.c",
+      "b": "generated/c/p07_bracket_checker/variant_loop_swap.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p07_bracket_checker",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/c/p07_bracket_checker/original.c",
+      "b": "generated/c/p07_bracket_checker/variant_dead_code.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p07_bracket_checker",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/c/p07_bracket_checker/original.c",
+      "b": "generated/c/p07_bracket_checker/variant_combined.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p07_bracket_checker",
+      "category": "combined"
+    },
+    {
+      "a": "generated/c/p07_bracket_checker/original.c",
+      "b": "generated/c/p07_bracket_checker/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p07_bracket_checker",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p07_bracket_checker/original.c",
+      "b": "generated/c/p07_bracket_checker/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p07_bracket_checker",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p07_bracket_checker/independent_1.c",
+      "b": "generated/c/p07_bracket_checker/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p07_bracket_checker",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p07_bracket_checker/variant_combined.c",
+      "b": "generated/c/p07_bracket_checker/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p07_bracket_checker",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/c/p08_base_conversion/original.c",
+      "b": "generated/c/p08_base_conversion/variant_rename.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p08_base_conversion",
+      "category": "rename"
+    },
+    {
+      "a": "generated/c/p08_base_conversion/original.c",
+      "b": "generated/c/p08_base_conversion/variant_comments_format.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p08_base_conversion",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/c/p08_base_conversion/original.c",
+      "b": "generated/c/p08_base_conversion/variant_reorder.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p08_base_conversion",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/c/p08_base_conversion/original.c",
+      "b": "generated/c/p08_base_conversion/variant_loop_swap.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p08_base_conversion",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/c/p08_base_conversion/original.c",
+      "b": "generated/c/p08_base_conversion/variant_dead_code.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p08_base_conversion",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/c/p08_base_conversion/original.c",
+      "b": "generated/c/p08_base_conversion/variant_combined.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p08_base_conversion",
+      "category": "combined"
+    },
+    {
+      "a": "generated/c/p08_base_conversion/original.c",
+      "b": "generated/c/p08_base_conversion/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p08_base_conversion",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p08_base_conversion/original.c",
+      "b": "generated/c/p08_base_conversion/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p08_base_conversion",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p08_base_conversion/independent_1.c",
+      "b": "generated/c/p08_base_conversion/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p08_base_conversion",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p08_base_conversion/variant_combined.c",
+      "b": "generated/c/p08_base_conversion/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p08_base_conversion",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/c/p09_inventory_billing/original.c",
+      "b": "generated/c/p09_inventory_billing/variant_rename.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p09_inventory_billing",
+      "category": "rename"
+    },
+    {
+      "a": "generated/c/p09_inventory_billing/original.c",
+      "b": "generated/c/p09_inventory_billing/variant_comments_format.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p09_inventory_billing",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/c/p09_inventory_billing/original.c",
+      "b": "generated/c/p09_inventory_billing/variant_reorder.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p09_inventory_billing",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/c/p09_inventory_billing/original.c",
+      "b": "generated/c/p09_inventory_billing/variant_loop_swap.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p09_inventory_billing",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/c/p09_inventory_billing/original.c",
+      "b": "generated/c/p09_inventory_billing/variant_dead_code.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p09_inventory_billing",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/c/p09_inventory_billing/original.c",
+      "b": "generated/c/p09_inventory_billing/variant_combined.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p09_inventory_billing",
+      "category": "combined"
+    },
+    {
+      "a": "generated/c/p09_inventory_billing/original.c",
+      "b": "generated/c/p09_inventory_billing/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p09_inventory_billing",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p09_inventory_billing/original.c",
+      "b": "generated/c/p09_inventory_billing/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p09_inventory_billing",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p09_inventory_billing/independent_1.c",
+      "b": "generated/c/p09_inventory_billing/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p09_inventory_billing",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p09_inventory_billing/variant_combined.c",
+      "b": "generated/c/p09_inventory_billing/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p09_inventory_billing",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/c/p10_temperature_series/original.c",
+      "b": "generated/c/p10_temperature_series/variant_rename.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p10_temperature_series",
+      "category": "rename"
+    },
+    {
+      "a": "generated/c/p10_temperature_series/original.c",
+      "b": "generated/c/p10_temperature_series/variant_comments_format.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p10_temperature_series",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/c/p10_temperature_series/original.c",
+      "b": "generated/c/p10_temperature_series/variant_reorder.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p10_temperature_series",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/c/p10_temperature_series/original.c",
+      "b": "generated/c/p10_temperature_series/variant_loop_swap.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p10_temperature_series",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/c/p10_temperature_series/original.c",
+      "b": "generated/c/p10_temperature_series/variant_dead_code.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p10_temperature_series",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/c/p10_temperature_series/original.c",
+      "b": "generated/c/p10_temperature_series/variant_combined.c",
+      "label": 1,
+      "language": "c",
+      "problem": "p10_temperature_series",
+      "category": "combined"
+    },
+    {
+      "a": "generated/c/p10_temperature_series/original.c",
+      "b": "generated/c/p10_temperature_series/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p10_temperature_series",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p10_temperature_series/original.c",
+      "b": "generated/c/p10_temperature_series/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p10_temperature_series",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p10_temperature_series/independent_1.c",
+      "b": "generated/c/p10_temperature_series/independent_2.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p10_temperature_series",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/c/p10_temperature_series/variant_combined.c",
+      "b": "generated/c/p10_temperature_series/independent_1.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p10_temperature_series",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/python/p01_grade_statistics/original.py",
+      "b": "generated/python/p01_grade_statistics/variant_rename.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p01_grade_statistics",
+      "category": "rename"
+    },
+    {
+      "a": "generated/python/p01_grade_statistics/original.py",
+      "b": "generated/python/p01_grade_statistics/variant_comments_format.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p01_grade_statistics",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/python/p01_grade_statistics/original.py",
+      "b": "generated/python/p01_grade_statistics/variant_reorder.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p01_grade_statistics",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/python/p01_grade_statistics/original.py",
+      "b": "generated/python/p01_grade_statistics/variant_loop_swap.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p01_grade_statistics",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/python/p01_grade_statistics/original.py",
+      "b": "generated/python/p01_grade_statistics/variant_dead_code.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p01_grade_statistics",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/python/p01_grade_statistics/original.py",
+      "b": "generated/python/p01_grade_statistics/variant_combined.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p01_grade_statistics",
+      "category": "combined"
+    },
+    {
+      "a": "generated/python/p01_grade_statistics/original.py",
+      "b": "generated/python/p01_grade_statistics/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p01_grade_statistics",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p01_grade_statistics/original.py",
+      "b": "generated/python/p01_grade_statistics/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p01_grade_statistics",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p01_grade_statistics/independent_1.py",
+      "b": "generated/python/p01_grade_statistics/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p01_grade_statistics",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p01_grade_statistics/variant_combined.py",
+      "b": "generated/python/p01_grade_statistics/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p01_grade_statistics",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/python/p02_matrix_operations/original.py",
+      "b": "generated/python/p02_matrix_operations/variant_rename.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p02_matrix_operations",
+      "category": "rename"
+    },
+    {
+      "a": "generated/python/p02_matrix_operations/original.py",
+      "b": "generated/python/p02_matrix_operations/variant_comments_format.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p02_matrix_operations",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/python/p02_matrix_operations/original.py",
+      "b": "generated/python/p02_matrix_operations/variant_reorder.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p02_matrix_operations",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/python/p02_matrix_operations/original.py",
+      "b": "generated/python/p02_matrix_operations/variant_loop_swap.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p02_matrix_operations",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/python/p02_matrix_operations/original.py",
+      "b": "generated/python/p02_matrix_operations/variant_dead_code.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p02_matrix_operations",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/python/p02_matrix_operations/original.py",
+      "b": "generated/python/p02_matrix_operations/variant_combined.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p02_matrix_operations",
+      "category": "combined"
+    },
+    {
+      "a": "generated/python/p02_matrix_operations/original.py",
+      "b": "generated/python/p02_matrix_operations/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p02_matrix_operations",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p02_matrix_operations/original.py",
+      "b": "generated/python/p02_matrix_operations/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p02_matrix_operations",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p02_matrix_operations/independent_1.py",
+      "b": "generated/python/p02_matrix_operations/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p02_matrix_operations",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p02_matrix_operations/variant_combined.py",
+      "b": "generated/python/p02_matrix_operations/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p02_matrix_operations",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/python/p03_prime_numbers/original.py",
+      "b": "generated/python/p03_prime_numbers/variant_rename.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p03_prime_numbers",
+      "category": "rename"
+    },
+    {
+      "a": "generated/python/p03_prime_numbers/original.py",
+      "b": "generated/python/p03_prime_numbers/variant_comments_format.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p03_prime_numbers",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/python/p03_prime_numbers/original.py",
+      "b": "generated/python/p03_prime_numbers/variant_reorder.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p03_prime_numbers",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/python/p03_prime_numbers/original.py",
+      "b": "generated/python/p03_prime_numbers/variant_loop_swap.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p03_prime_numbers",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/python/p03_prime_numbers/original.py",
+      "b": "generated/python/p03_prime_numbers/variant_dead_code.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p03_prime_numbers",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/python/p03_prime_numbers/original.py",
+      "b": "generated/python/p03_prime_numbers/variant_combined.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p03_prime_numbers",
+      "category": "combined"
+    },
+    {
+      "a": "generated/python/p03_prime_numbers/original.py",
+      "b": "generated/python/p03_prime_numbers/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p03_prime_numbers",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p03_prime_numbers/original.py",
+      "b": "generated/python/p03_prime_numbers/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p03_prime_numbers",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p03_prime_numbers/independent_1.py",
+      "b": "generated/python/p03_prime_numbers/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p03_prime_numbers",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p03_prime_numbers/variant_combined.py",
+      "b": "generated/python/p03_prime_numbers/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p03_prime_numbers",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/python/p04_string_analysis/original.py",
+      "b": "generated/python/p04_string_analysis/variant_rename.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p04_string_analysis",
+      "category": "rename"
+    },
+    {
+      "a": "generated/python/p04_string_analysis/original.py",
+      "b": "generated/python/p04_string_analysis/variant_comments_format.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p04_string_analysis",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/python/p04_string_analysis/original.py",
+      "b": "generated/python/p04_string_analysis/variant_reorder.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p04_string_analysis",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/python/p04_string_analysis/original.py",
+      "b": "generated/python/p04_string_analysis/variant_loop_swap.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p04_string_analysis",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/python/p04_string_analysis/original.py",
+      "b": "generated/python/p04_string_analysis/variant_dead_code.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p04_string_analysis",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/python/p04_string_analysis/original.py",
+      "b": "generated/python/p04_string_analysis/variant_combined.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p04_string_analysis",
+      "category": "combined"
+    },
+    {
+      "a": "generated/python/p04_string_analysis/original.py",
+      "b": "generated/python/p04_string_analysis/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p04_string_analysis",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p04_string_analysis/original.py",
+      "b": "generated/python/p04_string_analysis/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p04_string_analysis",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p04_string_analysis/independent_1.py",
+      "b": "generated/python/p04_string_analysis/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p04_string_analysis",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p04_string_analysis/variant_combined.py",
+      "b": "generated/python/p04_string_analysis/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p04_string_analysis",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/python/p05_bank_account/original.py",
+      "b": "generated/python/p05_bank_account/variant_rename.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p05_bank_account",
+      "category": "rename"
+    },
+    {
+      "a": "generated/python/p05_bank_account/original.py",
+      "b": "generated/python/p05_bank_account/variant_comments_format.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p05_bank_account",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/python/p05_bank_account/original.py",
+      "b": "generated/python/p05_bank_account/variant_reorder.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p05_bank_account",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/python/p05_bank_account/original.py",
+      "b": "generated/python/p05_bank_account/variant_loop_swap.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p05_bank_account",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/python/p05_bank_account/original.py",
+      "b": "generated/python/p05_bank_account/variant_dead_code.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p05_bank_account",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/python/p05_bank_account/original.py",
+      "b": "generated/python/p05_bank_account/variant_combined.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p05_bank_account",
+      "category": "combined"
+    },
+    {
+      "a": "generated/python/p05_bank_account/original.py",
+      "b": "generated/python/p05_bank_account/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p05_bank_account",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p05_bank_account/original.py",
+      "b": "generated/python/p05_bank_account/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p05_bank_account",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p05_bank_account/independent_1.py",
+      "b": "generated/python/p05_bank_account/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p05_bank_account",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p05_bank_account/variant_combined.py",
+      "b": "generated/python/p05_bank_account/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p05_bank_account",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/python/p06_sort_and_search/original.py",
+      "b": "generated/python/p06_sort_and_search/variant_rename.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p06_sort_and_search",
+      "category": "rename"
+    },
+    {
+      "a": "generated/python/p06_sort_and_search/original.py",
+      "b": "generated/python/p06_sort_and_search/variant_comments_format.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p06_sort_and_search",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/python/p06_sort_and_search/original.py",
+      "b": "generated/python/p06_sort_and_search/variant_reorder.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p06_sort_and_search",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/python/p06_sort_and_search/original.py",
+      "b": "generated/python/p06_sort_and_search/variant_loop_swap.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p06_sort_and_search",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/python/p06_sort_and_search/original.py",
+      "b": "generated/python/p06_sort_and_search/variant_dead_code.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p06_sort_and_search",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/python/p06_sort_and_search/original.py",
+      "b": "generated/python/p06_sort_and_search/variant_combined.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p06_sort_and_search",
+      "category": "combined"
+    },
+    {
+      "a": "generated/python/p06_sort_and_search/original.py",
+      "b": "generated/python/p06_sort_and_search/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p06_sort_and_search",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p06_sort_and_search/original.py",
+      "b": "generated/python/p06_sort_and_search/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p06_sort_and_search",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p06_sort_and_search/independent_1.py",
+      "b": "generated/python/p06_sort_and_search/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p06_sort_and_search",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p06_sort_and_search/variant_combined.py",
+      "b": "generated/python/p06_sort_and_search/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p06_sort_and_search",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/python/p07_bracket_checker/original.py",
+      "b": "generated/python/p07_bracket_checker/variant_rename.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p07_bracket_checker",
+      "category": "rename"
+    },
+    {
+      "a": "generated/python/p07_bracket_checker/original.py",
+      "b": "generated/python/p07_bracket_checker/variant_comments_format.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p07_bracket_checker",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/python/p07_bracket_checker/original.py",
+      "b": "generated/python/p07_bracket_checker/variant_reorder.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p07_bracket_checker",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/python/p07_bracket_checker/original.py",
+      "b": "generated/python/p07_bracket_checker/variant_loop_swap.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p07_bracket_checker",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/python/p07_bracket_checker/original.py",
+      "b": "generated/python/p07_bracket_checker/variant_dead_code.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p07_bracket_checker",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/python/p07_bracket_checker/original.py",
+      "b": "generated/python/p07_bracket_checker/variant_combined.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p07_bracket_checker",
+      "category": "combined"
+    },
+    {
+      "a": "generated/python/p07_bracket_checker/original.py",
+      "b": "generated/python/p07_bracket_checker/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p07_bracket_checker",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p07_bracket_checker/original.py",
+      "b": "generated/python/p07_bracket_checker/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p07_bracket_checker",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p07_bracket_checker/independent_1.py",
+      "b": "generated/python/p07_bracket_checker/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p07_bracket_checker",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p07_bracket_checker/variant_combined.py",
+      "b": "generated/python/p07_bracket_checker/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p07_bracket_checker",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/python/p08_base_conversion/original.py",
+      "b": "generated/python/p08_base_conversion/variant_rename.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p08_base_conversion",
+      "category": "rename"
+    },
+    {
+      "a": "generated/python/p08_base_conversion/original.py",
+      "b": "generated/python/p08_base_conversion/variant_comments_format.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p08_base_conversion",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/python/p08_base_conversion/original.py",
+      "b": "generated/python/p08_base_conversion/variant_reorder.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p08_base_conversion",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/python/p08_base_conversion/original.py",
+      "b": "generated/python/p08_base_conversion/variant_loop_swap.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p08_base_conversion",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/python/p08_base_conversion/original.py",
+      "b": "generated/python/p08_base_conversion/variant_dead_code.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p08_base_conversion",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/python/p08_base_conversion/original.py",
+      "b": "generated/python/p08_base_conversion/variant_combined.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p08_base_conversion",
+      "category": "combined"
+    },
+    {
+      "a": "generated/python/p08_base_conversion/original.py",
+      "b": "generated/python/p08_base_conversion/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p08_base_conversion",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p08_base_conversion/original.py",
+      "b": "generated/python/p08_base_conversion/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p08_base_conversion",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p08_base_conversion/independent_1.py",
+      "b": "generated/python/p08_base_conversion/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p08_base_conversion",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p08_base_conversion/variant_combined.py",
+      "b": "generated/python/p08_base_conversion/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p08_base_conversion",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/python/p09_inventory_billing/original.py",
+      "b": "generated/python/p09_inventory_billing/variant_rename.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p09_inventory_billing",
+      "category": "rename"
+    },
+    {
+      "a": "generated/python/p09_inventory_billing/original.py",
+      "b": "generated/python/p09_inventory_billing/variant_comments_format.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p09_inventory_billing",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/python/p09_inventory_billing/original.py",
+      "b": "generated/python/p09_inventory_billing/variant_reorder.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p09_inventory_billing",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/python/p09_inventory_billing/original.py",
+      "b": "generated/python/p09_inventory_billing/variant_loop_swap.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p09_inventory_billing",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/python/p09_inventory_billing/original.py",
+      "b": "generated/python/p09_inventory_billing/variant_dead_code.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p09_inventory_billing",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/python/p09_inventory_billing/original.py",
+      "b": "generated/python/p09_inventory_billing/variant_combined.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p09_inventory_billing",
+      "category": "combined"
+    },
+    {
+      "a": "generated/python/p09_inventory_billing/original.py",
+      "b": "generated/python/p09_inventory_billing/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p09_inventory_billing",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p09_inventory_billing/original.py",
+      "b": "generated/python/p09_inventory_billing/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p09_inventory_billing",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p09_inventory_billing/independent_1.py",
+      "b": "generated/python/p09_inventory_billing/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p09_inventory_billing",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p09_inventory_billing/variant_combined.py",
+      "b": "generated/python/p09_inventory_billing/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p09_inventory_billing",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/python/p10_temperature_series/original.py",
+      "b": "generated/python/p10_temperature_series/variant_rename.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p10_temperature_series",
+      "category": "rename"
+    },
+    {
+      "a": "generated/python/p10_temperature_series/original.py",
+      "b": "generated/python/p10_temperature_series/variant_comments_format.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p10_temperature_series",
+      "category": "comments_format"
+    },
+    {
+      "a": "generated/python/p10_temperature_series/original.py",
+      "b": "generated/python/p10_temperature_series/variant_reorder.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p10_temperature_series",
+      "category": "reorder"
+    },
+    {
+      "a": "generated/python/p10_temperature_series/original.py",
+      "b": "generated/python/p10_temperature_series/variant_loop_swap.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p10_temperature_series",
+      "category": "loop_swap"
+    },
+    {
+      "a": "generated/python/p10_temperature_series/original.py",
+      "b": "generated/python/p10_temperature_series/variant_dead_code.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p10_temperature_series",
+      "category": "dead_code"
+    },
+    {
+      "a": "generated/python/p10_temperature_series/original.py",
+      "b": "generated/python/p10_temperature_series/variant_combined.py",
+      "label": 1,
+      "language": "python",
+      "problem": "p10_temperature_series",
+      "category": "combined"
+    },
+    {
+      "a": "generated/python/p10_temperature_series/original.py",
+      "b": "generated/python/p10_temperature_series/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p10_temperature_series",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p10_temperature_series/original.py",
+      "b": "generated/python/p10_temperature_series/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p10_temperature_series",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p10_temperature_series/independent_1.py",
+      "b": "generated/python/p10_temperature_series/independent_2.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p10_temperature_series",
+      "category": "independent_same_problem"
+    },
+    {
+      "a": "generated/python/p10_temperature_series/variant_combined.py",
+      "b": "generated/python/p10_temperature_series/independent_1.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p10_temperature_series",
+      "category": "obfuscated_vs_independent"
+    },
+    {
+      "a": "generated/python/p01_grade_statistics/original.py",
+      "b": "generated/python/p02_matrix_operations/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p01_grade_statistics|p02_matrix_operations",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p01_grade_statistics/original.py",
+      "b": "generated/python/p03_prime_numbers/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p01_grade_statistics|p03_prime_numbers",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p01_grade_statistics/original.py",
+      "b": "generated/python/p04_string_analysis/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p01_grade_statistics|p04_string_analysis",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p01_grade_statistics/original.py",
+      "b": "generated/python/p05_bank_account/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p01_grade_statistics|p05_bank_account",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p01_grade_statistics/original.py",
+      "b": "generated/python/p06_sort_and_search/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p01_grade_statistics|p06_sort_and_search",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p01_grade_statistics/original.py",
+      "b": "generated/python/p07_bracket_checker/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p01_grade_statistics|p07_bracket_checker",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p01_grade_statistics/original.py",
+      "b": "generated/python/p08_base_conversion/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p01_grade_statistics|p08_base_conversion",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p01_grade_statistics/original.py",
+      "b": "generated/python/p09_inventory_billing/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p01_grade_statistics|p09_inventory_billing",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p01_grade_statistics/original.py",
+      "b": "generated/python/p10_temperature_series/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p01_grade_statistics|p10_temperature_series",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p02_matrix_operations/original.py",
+      "b": "generated/python/p03_prime_numbers/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p02_matrix_operations|p03_prime_numbers",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p02_matrix_operations/original.py",
+      "b": "generated/python/p04_string_analysis/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p02_matrix_operations|p04_string_analysis",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p02_matrix_operations/original.py",
+      "b": "generated/python/p05_bank_account/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p02_matrix_operations|p05_bank_account",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p02_matrix_operations/original.py",
+      "b": "generated/python/p06_sort_and_search/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p02_matrix_operations|p06_sort_and_search",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p02_matrix_operations/original.py",
+      "b": "generated/python/p07_bracket_checker/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p02_matrix_operations|p07_bracket_checker",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p02_matrix_operations/original.py",
+      "b": "generated/python/p08_base_conversion/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p02_matrix_operations|p08_base_conversion",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p02_matrix_operations/original.py",
+      "b": "generated/python/p09_inventory_billing/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p02_matrix_operations|p09_inventory_billing",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p02_matrix_operations/original.py",
+      "b": "generated/python/p10_temperature_series/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p02_matrix_operations|p10_temperature_series",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p03_prime_numbers/original.py",
+      "b": "generated/python/p04_string_analysis/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p03_prime_numbers|p04_string_analysis",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p03_prime_numbers/original.py",
+      "b": "generated/python/p05_bank_account/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p03_prime_numbers|p05_bank_account",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p03_prime_numbers/original.py",
+      "b": "generated/python/p06_sort_and_search/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p03_prime_numbers|p06_sort_and_search",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p03_prime_numbers/original.py",
+      "b": "generated/python/p07_bracket_checker/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p03_prime_numbers|p07_bracket_checker",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p03_prime_numbers/original.py",
+      "b": "generated/python/p08_base_conversion/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p03_prime_numbers|p08_base_conversion",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p03_prime_numbers/original.py",
+      "b": "generated/python/p09_inventory_billing/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p03_prime_numbers|p09_inventory_billing",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p03_prime_numbers/original.py",
+      "b": "generated/python/p10_temperature_series/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p03_prime_numbers|p10_temperature_series",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p04_string_analysis/original.py",
+      "b": "generated/python/p05_bank_account/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p04_string_analysis|p05_bank_account",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p04_string_analysis/original.py",
+      "b": "generated/python/p06_sort_and_search/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p04_string_analysis|p06_sort_and_search",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p04_string_analysis/original.py",
+      "b": "generated/python/p07_bracket_checker/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p04_string_analysis|p07_bracket_checker",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p04_string_analysis/original.py",
+      "b": "generated/python/p08_base_conversion/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p04_string_analysis|p08_base_conversion",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p04_string_analysis/original.py",
+      "b": "generated/python/p09_inventory_billing/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p04_string_analysis|p09_inventory_billing",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p04_string_analysis/original.py",
+      "b": "generated/python/p10_temperature_series/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p04_string_analysis|p10_temperature_series",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p05_bank_account/original.py",
+      "b": "generated/python/p06_sort_and_search/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p05_bank_account|p06_sort_and_search",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p05_bank_account/original.py",
+      "b": "generated/python/p07_bracket_checker/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p05_bank_account|p07_bracket_checker",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p05_bank_account/original.py",
+      "b": "generated/python/p08_base_conversion/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p05_bank_account|p08_base_conversion",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p05_bank_account/original.py",
+      "b": "generated/python/p09_inventory_billing/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p05_bank_account|p09_inventory_billing",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p05_bank_account/original.py",
+      "b": "generated/python/p10_temperature_series/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p05_bank_account|p10_temperature_series",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p06_sort_and_search/original.py",
+      "b": "generated/python/p07_bracket_checker/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p06_sort_and_search|p07_bracket_checker",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p06_sort_and_search/original.py",
+      "b": "generated/python/p08_base_conversion/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p06_sort_and_search|p08_base_conversion",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p06_sort_and_search/original.py",
+      "b": "generated/python/p09_inventory_billing/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p06_sort_and_search|p09_inventory_billing",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p06_sort_and_search/original.py",
+      "b": "generated/python/p10_temperature_series/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p06_sort_and_search|p10_temperature_series",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p07_bracket_checker/original.py",
+      "b": "generated/python/p08_base_conversion/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p07_bracket_checker|p08_base_conversion",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p07_bracket_checker/original.py",
+      "b": "generated/python/p09_inventory_billing/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p07_bracket_checker|p09_inventory_billing",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p07_bracket_checker/original.py",
+      "b": "generated/python/p10_temperature_series/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p07_bracket_checker|p10_temperature_series",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p08_base_conversion/original.py",
+      "b": "generated/python/p09_inventory_billing/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p08_base_conversion|p09_inventory_billing",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p08_base_conversion/original.py",
+      "b": "generated/python/p10_temperature_series/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p08_base_conversion|p10_temperature_series",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/python/p09_inventory_billing/original.py",
+      "b": "generated/python/p10_temperature_series/original.py",
+      "label": 0,
+      "language": "python",
+      "problem": "p09_inventory_billing|p10_temperature_series",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p01_grade_statistics/original.c",
+      "b": "generated/c/p02_matrix_operations/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p01_grade_statistics|p02_matrix_operations",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p01_grade_statistics/original.c",
+      "b": "generated/c/p03_prime_numbers/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p01_grade_statistics|p03_prime_numbers",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p01_grade_statistics/original.c",
+      "b": "generated/c/p04_string_analysis/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p01_grade_statistics|p04_string_analysis",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p01_grade_statistics/original.c",
+      "b": "generated/c/p05_bank_account/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p01_grade_statistics|p05_bank_account",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p01_grade_statistics/original.c",
+      "b": "generated/c/p06_sort_and_search/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p01_grade_statistics|p06_sort_and_search",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p01_grade_statistics/original.c",
+      "b": "generated/c/p07_bracket_checker/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p01_grade_statistics|p07_bracket_checker",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p01_grade_statistics/original.c",
+      "b": "generated/c/p08_base_conversion/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p01_grade_statistics|p08_base_conversion",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p01_grade_statistics/original.c",
+      "b": "generated/c/p09_inventory_billing/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p01_grade_statistics|p09_inventory_billing",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p01_grade_statistics/original.c",
+      "b": "generated/c/p10_temperature_series/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p01_grade_statistics|p10_temperature_series",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p02_matrix_operations/original.c",
+      "b": "generated/c/p03_prime_numbers/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p02_matrix_operations|p03_prime_numbers",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p02_matrix_operations/original.c",
+      "b": "generated/c/p04_string_analysis/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p02_matrix_operations|p04_string_analysis",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p02_matrix_operations/original.c",
+      "b": "generated/c/p05_bank_account/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p02_matrix_operations|p05_bank_account",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p02_matrix_operations/original.c",
+      "b": "generated/c/p06_sort_and_search/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p02_matrix_operations|p06_sort_and_search",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p02_matrix_operations/original.c",
+      "b": "generated/c/p07_bracket_checker/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p02_matrix_operations|p07_bracket_checker",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p02_matrix_operations/original.c",
+      "b": "generated/c/p08_base_conversion/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p02_matrix_operations|p08_base_conversion",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p02_matrix_operations/original.c",
+      "b": "generated/c/p09_inventory_billing/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p02_matrix_operations|p09_inventory_billing",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p02_matrix_operations/original.c",
+      "b": "generated/c/p10_temperature_series/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p02_matrix_operations|p10_temperature_series",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p03_prime_numbers/original.c",
+      "b": "generated/c/p04_string_analysis/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p03_prime_numbers|p04_string_analysis",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p03_prime_numbers/original.c",
+      "b": "generated/c/p05_bank_account/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p03_prime_numbers|p05_bank_account",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p03_prime_numbers/original.c",
+      "b": "generated/c/p06_sort_and_search/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p03_prime_numbers|p06_sort_and_search",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p03_prime_numbers/original.c",
+      "b": "generated/c/p07_bracket_checker/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p03_prime_numbers|p07_bracket_checker",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p03_prime_numbers/original.c",
+      "b": "generated/c/p08_base_conversion/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p03_prime_numbers|p08_base_conversion",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p03_prime_numbers/original.c",
+      "b": "generated/c/p09_inventory_billing/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p03_prime_numbers|p09_inventory_billing",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p03_prime_numbers/original.c",
+      "b": "generated/c/p10_temperature_series/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p03_prime_numbers|p10_temperature_series",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p04_string_analysis/original.c",
+      "b": "generated/c/p05_bank_account/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p04_string_analysis|p05_bank_account",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p04_string_analysis/original.c",
+      "b": "generated/c/p06_sort_and_search/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p04_string_analysis|p06_sort_and_search",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p04_string_analysis/original.c",
+      "b": "generated/c/p07_bracket_checker/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p04_string_analysis|p07_bracket_checker",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p04_string_analysis/original.c",
+      "b": "generated/c/p08_base_conversion/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p04_string_analysis|p08_base_conversion",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p04_string_analysis/original.c",
+      "b": "generated/c/p09_inventory_billing/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p04_string_analysis|p09_inventory_billing",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p04_string_analysis/original.c",
+      "b": "generated/c/p10_temperature_series/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p04_string_analysis|p10_temperature_series",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p05_bank_account/original.c",
+      "b": "generated/c/p06_sort_and_search/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p05_bank_account|p06_sort_and_search",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p05_bank_account/original.c",
+      "b": "generated/c/p07_bracket_checker/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p05_bank_account|p07_bracket_checker",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p05_bank_account/original.c",
+      "b": "generated/c/p08_base_conversion/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p05_bank_account|p08_base_conversion",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p05_bank_account/original.c",
+      "b": "generated/c/p09_inventory_billing/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p05_bank_account|p09_inventory_billing",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p05_bank_account/original.c",
+      "b": "generated/c/p10_temperature_series/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p05_bank_account|p10_temperature_series",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p06_sort_and_search/original.c",
+      "b": "generated/c/p07_bracket_checker/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p06_sort_and_search|p07_bracket_checker",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p06_sort_and_search/original.c",
+      "b": "generated/c/p08_base_conversion/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p06_sort_and_search|p08_base_conversion",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p06_sort_and_search/original.c",
+      "b": "generated/c/p09_inventory_billing/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p06_sort_and_search|p09_inventory_billing",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p06_sort_and_search/original.c",
+      "b": "generated/c/p10_temperature_series/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p06_sort_and_search|p10_temperature_series",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p07_bracket_checker/original.c",
+      "b": "generated/c/p08_base_conversion/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p07_bracket_checker|p08_base_conversion",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p07_bracket_checker/original.c",
+      "b": "generated/c/p09_inventory_billing/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p07_bracket_checker|p09_inventory_billing",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p07_bracket_checker/original.c",
+      "b": "generated/c/p10_temperature_series/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p07_bracket_checker|p10_temperature_series",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p08_base_conversion/original.c",
+      "b": "generated/c/p09_inventory_billing/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p08_base_conversion|p09_inventory_billing",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p08_base_conversion/original.c",
+      "b": "generated/c/p10_temperature_series/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p08_base_conversion|p10_temperature_series",
+      "category": "different_problem"
+    },
+    {
+      "a": "generated/c/p09_inventory_billing/original.c",
+      "b": "generated/c/p10_temperature_series/original.c",
+      "label": 0,
+      "language": "c",
+      "problem": "p09_inventory_billing|p10_temperature_series",
+      "category": "different_problem"
+    }
+  ]
+}

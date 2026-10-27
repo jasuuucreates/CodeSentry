@@ -1,0 +1,348 @@
+{
+  "generated_at": "2026-10-27T12:20:23+05:30",
+  "dataset": {
+    "pairs": 290,
+    "positives": 120,
+    "negatives": 170,
+    "by_language": {
+      "c": 145,
+      "python": 145
+    },
+    "by_category": {
+      "rename": 20,
+      "comments_format": 20,
+      "reorder": 20,
+      "loop_swap": 20,
+      "dead_code": 20,
+      "combined": 20,
+      "independent_same_problem": 60,
+      "obfuscated_vs_independent": 20,
+      "different_problem": 90
+    }
+  },
+  "default_threshold": 0.5,
+  "config": {
+    "k": 5,
+    "w": 4,
+    "w_token": 0.5,
+    "w_structure": 0.5,
+    "high_threshold": 0.75,
+    "moderate_threshold": 0.5,
+    "ted_node_cap": 200
+  },
+  "methods": {
+    "text": {
+      "label": "Plain text matching (difflib, raw lines)",
+      "at_default": {
+        "threshold": 0.5,
+        "tp": 69,
+        "fp": 0,
+        "tn": 170,
+        "fn": 51,
+        "precision": 1.0,
+        "recall": 0.575,
+        "f1": 0.7302,
+        "accuracy": 0.8241
+      },
+      "best": {
+        "threshold": 0.34,
+        "tp": 82,
+        "fp": 0,
+        "tn": 170,
+        "fn": 38,
+        "precision": 1.0,
+        "recall": 0.6833,
+        "f1": 0.8119,
+        "accuracy": 0.869
+      },
+      "auc": 0.8045,
+      "mean_ms": 0.238,
+      "recall_by_category": {
+        "rename": 0.4,
+        "comments_format": 0.5,
+        "reorder": 0.55,
+        "loop_swap": 1.0,
+        "dead_code": 1.0,
+        "combined": 0.0
+      },
+      "fpr_by_category": {
+        "independent_same_problem": 0.0,
+        "obfuscated_vs_independent": 0.0,
+        "different_problem": 0.0
+      }
+    },
+    "tfidf": {
+      "label": "TF-IDF cosine (raw words)",
+      "at_default": {
+        "threshold": 0.5,
+        "tp": 107,
+        "fp": 120,
+        "tn": 50,
+        "fn": 13,
+        "precision": 0.4714,
+        "recall": 0.8917,
+        "f1": 0.6167,
+        "accuracy": 0.5414
+      },
+      "best": {
+        "threshold": 0.74,
+        "tp": 78,
+        "fp": 2,
+        "tn": 168,
+        "fn": 42,
+        "precision": 0.975,
+        "recall": 0.65,
+        "f1": 0.78,
+        "accuracy": 0.8483
+      },
+      "auc": 0.8427,
+      "mean_ms": 0.278,
+      "recall_by_category": {
+        "rename": 0.85,
+        "comments_format": 1.0,
+        "reorder": 1.0,
+        "loop_swap": 1.0,
+        "dead_code": 1.0,
+        "combined": 0.5
+      },
+      "fpr_by_category": {
+        "independent_same_problem": 0.7833,
+        "obfuscated_vs_independent": 0.1,
+        "different_problem": 0.7889
+      }
+    },
+    "token": {
+      "label": "Token winnowing (Jaccard of fingerprints)",
+      "at_default": {
+        "threshold": 0.5,
+        "tp": 116,
+        "fp": 0,
+        "tn": 170,
+        "fn": 4,
+        "precision": 1.0,
+        "recall": 0.9667,
+        "f1": 0.9831,
+        "accuracy": 0.9862
+      },
+      "best": {
+        "threshold": 0.24,
+        "tp": 120,
+        "fp": 0,
+        "tn": 170,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0
+      },
+      "auc": 1.0,
+      "mean_ms": 2.812,
+      "recall_by_category": {
+        "rename": 1.0,
+        "comments_format": 1.0,
+        "reorder": 1.0,
+        "loop_swap": 1.0,
+        "dead_code": 1.0,
+        "combined": 0.8
+      },
+      "fpr_by_category": {
+        "independent_same_problem": 0.0,
+        "obfuscated_vs_independent": 0.0,
+        "different_problem": 0.0
+      }
+    },
+    "structure": {
+      "label": "Structure (AST tree similarity)",
+      "at_default": {
+        "threshold": 0.5,
+        "tp": 120,
+        "fp": 1,
+        "tn": 169,
+        "fn": 0,
+        "precision": 0.9917,
+        "recall": 1.0,
+        "f1": 0.9959,
+        "accuracy": 0.9966
+      },
+      "best": {
+        "threshold": 0.51,
+        "tp": 120,
+        "fp": 0,
+        "tn": 170,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0
+      },
+      "auc": 1.0,
+      "mean_ms": 7.095,
+      "recall_by_category": {
+        "rename": 1.0,
+        "comments_format": 1.0,
+        "reorder": 1.0,
+        "loop_swap": 1.0,
+        "dead_code": 1.0,
+        "combined": 1.0
+      },
+      "fpr_by_category": {
+        "independent_same_problem": 0.0167,
+        "obfuscated_vs_independent": 0.0,
+        "different_problem": 0.0
+      }
+    },
+    "hybrid": {
+      "label": "Hybrid (token + structure)",
+      "at_default": {
+        "threshold": 0.5,
+        "tp": 120,
+        "fp": 0,
+        "tn": 170,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0
+      },
+      "best": {
+        "threshold": 0.36,
+        "tp": 120,
+        "fp": 0,
+        "tn": 170,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0
+      },
+      "auc": 1.0,
+      "mean_ms": 9.407,
+      "recall_by_category": {
+        "rename": 1.0,
+        "comments_format": 1.0,
+        "reorder": 1.0,
+        "loop_swap": 1.0,
+        "dead_code": 1.0,
+        "combined": 1.0
+      },
+      "fpr_by_category": {
+        "independent_same_problem": 0.0,
+        "obfuscated_vs_independent": 0.0,
+        "different_problem": 0.0
+      }
+    },
+    "hybrid_calibrated": {
+      "label": "Calibrated hybrid (trained, 5-fold grouped CV)",
+      "at_default": {
+        "threshold": 0.38,
+        "tp": 120,
+        "fp": 0,
+        "tn": 170,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0
+      },
+      "best": {
+        "threshold": 0.38,
+        "tp": 120,
+        "fp": 0,
+        "tn": 170,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0
+      },
+      "auc": 1.0,
+      "mean_ms": 8.771,
+      "recall_by_category": {
+        "combined": 1.0,
+        "comments_format": 1.0,
+        "dead_code": 1.0,
+        "loop_swap": 1.0,
+        "rename": 1.0,
+        "reorder": 1.0
+      },
+      "fpr_by_category": {
+        "different_problem": 0.0,
+        "independent_same_problem": 0.0,
+        "obfuscated_vs_independent": 0.0
+      },
+      "cv": {
+        "folds": 5,
+        "f1_per_fold": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "f1_mean": 1.0,
+        "f1_std": 0.0
+      }
+    },
+    "logreg": {
+      "label": "Logistic regression (trained, 5-fold grouped CV)",
+      "at_default": {
+        "threshold": 0.5,
+        "tp": 120,
+        "fp": 0,
+        "tn": 170,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0
+      },
+      "best": {
+        "threshold": 0.5,
+        "tp": 120,
+        "fp": 0,
+        "tn": 170,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0
+      },
+      "auc": 1.0,
+      "mean_ms": 8.771,
+      "recall_by_category": {
+        "combined": 1.0,
+        "comments_format": 1.0,
+        "dead_code": 1.0,
+        "loop_swap": 1.0,
+        "rename": 1.0,
+        "reorder": 1.0
+      },
+      "fpr_by_category": {
+        "different_problem": 0.0,
+        "independent_same_problem": 0.0,
+        "obfuscated_vs_independent": 0.0
+      },
+      "cv": {
+        "folds": 5,
+        "f1_per_fold": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "f1_mean": 1.0,
+        "f1_std": 0.0
+      }
+    }
+  },
+  "method_order": [
+    "text",
+    "tfidf",
+    "token",
+    "structure",
+    "hybrid",
+    "hybrid_calibrated",
+    "logreg"
+  ]
+}

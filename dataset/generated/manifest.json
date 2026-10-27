@@ -1,0 +1,4230 @@
+{
+  "version": 1,
+  "obfuscation_types": [
+    "rename",
+    "comments_format",
+    "reorder",
+    "loop_swap",
+    "dead_code",
+    "combined"
+  ],
+  "python": "D:\\padhai\\se lab updated\\CodeSentry_Project\\CodeSentry\\.venv\\Scripts\\python.exe",
+  "checks": {
+    "python": "ast.parse + executed, stdout equal to the original",
+    "c": "tree-sitter without ERROR/missing nodes + static invariants"
+  },
+  "variants": [
+    {
+      "language": "python",
+      "problem": "p01_grade_statistics",
+      "kind": "rename",
+      "source": "generated/python/p01_grade_statistics/original.py",
+      "path": "generated/python/p01_grade_statistics/variant_rename.py",
+      "seed": 100,
+      "report": {
+        "kind": "rename",
+        "changes": 25,
+        "details": [
+          "calculate_mean -> work_out_avg",
+          "calculate_median -> work_out_middle_value",
+          "calculate_std_dev -> compute_spread",
+          "letter_grade -> letter_band",
+          "grade_distribution -> level_distribution",
+          "find_topper -> search_topper",
+          "STUDENTS -> PUPILS",
+          "marks -> points",
+          "total -> running_sum",
+          "i -> idx",
+          "ordered -> local_ordered",
+          "n -> size",
+          "middle -> the_middle",
+          "mean -> avg",
+          "squared_sum -> squared_accumulated",
+          "mark -> score",
+          "counts -> freq",
+          "students -> learners",
+          "median -> middle_value",
+          "std_dev -> sigma_deviation",
+          "distribution -> the_distribution",
+          "grade -> band",
+          "best_name -> top_title",
+          "best_mark -> top_point",
+          "name -> label"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 16
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p01_grade_statistics",
+      "kind": "comments_format",
+      "source": "generated/python/p01_grade_statistics/original.py",
+      "path": "generated/python/p01_grade_statistics/variant_comments_format.py",
+      "seed": 110,
+      "report": {
+        "kind": "comments_format",
+        "changes": 20,
+        "details": [
+          "removed about 4 comment(s) and 1 docstring(s)",
+          "added 15 new comment(s)",
+          "re-indented 4 -> 2 spaces",
+          "blank lines between top-level definitions: 2"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 16
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p01_grade_statistics",
+      "kind": "reorder",
+      "source": "generated/python/p01_grade_statistics/original.py",
+      "path": "generated/python/p01_grade_statistics/variant_reorder.py",
+      "seed": 120,
+      "report": {
+        "kind": "reorder",
+        "changes": 7,
+        "details": [
+          "function order: letter_grade, main, calculate_median, find_topper, calculate_std_dev, grade_distribution, calculate_mean"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 16
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p01_grade_statistics",
+      "kind": "loop_swap",
+      "source": "generated/python/p01_grade_statistics/original.py",
+      "path": "generated/python/p01_grade_statistics/variant_loop_swap.py",
+      "seed": 130,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 1,
+        "details": [
+          "line 17: for i in range(...) -> while loop"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 16
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p01_grade_statistics",
+      "kind": "dead_code",
+      "source": "generated/python/p01_grade_statistics/original.py",
+      "path": "generated/python/p01_grade_statistics/variant_dead_code.py",
+      "seed": 140,
+      "report": {
+        "kind": "dead_code",
+        "changes": 6,
+        "details": [
+          "unused variable spare_items in main()",
+          "unused variable checkpoint in calculate_std_dev()",
+          "unused variable max_attempts in calculate_std_dev()",
+          "unused variable unused_total in grade_distribution()",
+          "unused variable retry_limit in grade_distribution()",
+          "never-called helper split_into_chunks()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 16
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p01_grade_statistics",
+      "kind": "combined",
+      "source": "generated/python/p01_grade_statistics/original.py",
+      "path": "generated/python/p01_grade_statistics/variant_combined.py",
+      "seed": 150,
+      "report": {
+        "kind": "combined",
+        "changes": 52,
+        "details": [
+          "rename: 25 change(s)",
+          "  calculate_mean -> work_out_avg",
+          "  calculate_median -> compute_middle_value",
+          "  calculate_std_dev -> work_out_sigma_deviation",
+          "  letter_grade -> letter_level",
+          "  grade_distribution -> band_distribution",
+          "  find_topper -> search_topper",
+          "  STUDENTS -> LEARNERS",
+          "  marks -> scores",
+          "  total -> grand",
+          "  i -> pos",
+          "  ordered -> local_ordered",
+          "  n -> count_n",
+          "  middle -> cur_middle",
+          "  mean -> avg",
+          "  squared_sum -> squared_acc_total",
+          "  mark -> point",
+          "  counts -> tallies",
+          "  students -> learners",
+          "  median -> mid_val",
+          "  std_dev -> sigma_spread",
+          "  distribution -> cur_distribution",
+          "  grade -> band",
+          "  best_name -> top_title",
+          "  best_mark -> leader_point",
+          "  name -> label",
+          "loop_swap: 1 change(s)",
+          "  line 11: for pos in range(...) -> while loop",
+          "reorder: 5 change(s)",
+          "  function order: work_out_sigma_deviation, work_out_avg, search_topper, letter_level, compute_middle_value, band_distribution, main",
+          "dead_code: 7 change(s)",
+          "  unused variable unused_total in letter_level()",
+          "  unused variable scale_factor in letter_level()",
+          "  unused variable temp_buffer in main()",
+          "  unused variable log_prefix in search_topper()",
+          "  unused variable trace_level in letter_level()",
+          "  unused variable retry_limit in letter_level()",
+          "  never-called helper split_into_chunks()",
+          "comments_format: 14 change(s)",
+          "  removed about 0 comment(s) and 1 docstring(s)",
+          "  added 13 new comment(s)",
+          "  re-indented 4 -> 2 spaces",
+          "  blank lines between top-level definitions: 2"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 16
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p01_grade_statistics",
+      "kind": "rename",
+      "source": "generated/c/p01_grade_statistics/original.c",
+      "path": "generated/c/p01_grade_statistics/variant_rename.c",
+      "seed": 105,
+      "report": {
+        "kind": "rename",
+        "changes": 22,
+        "details": [
+          "calculate_mean -> determine_average",
+          "marks -> results",
+          "n -> count_n",
+          "total -> acc",
+          "i -> pos",
+          "calculate_median -> determine_mid_val",
+          "sorted -> arranged",
+          "j -> inner",
+          "temp -> tmp",
+          "calculate_std_dev -> compute_sigma_deviation",
+          "mean -> avg",
+          "squared_sum -> squared_accumulated",
+          "letter_grade -> letter_band",
+          "mark -> point",
+          "find_topper -> search_topper",
+          "best -> leader",
+          "names -> titles",
+          "counts -> tallies",
+          "median -> middle_value",
+          "std_dev -> sigma_deviation",
+          "g -> my_g",
+          "top -> peak"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "token stream identical up to a one-to-one identifier mapping (struct fields kept)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p01_grade_statistics",
+      "kind": "comments_format",
+      "source": "generated/c/p01_grade_statistics/original.c",
+      "path": "generated/c/p01_grade_statistics/variant_comments_format.c",
+      "seed": 115,
+      "report": {
+        "kind": "comments_format",
+        "changes": 37,
+        "details": [
+          "removed 4 comment(s)",
+          "added 7 comment(s)",
+          "brace style knr -> allman",
+          "blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "code tokens identical (only comments and layout changed)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p01_grade_statistics",
+      "kind": "reorder",
+      "source": "generated/c/p01_grade_statistics/original.c",
+      "path": "generated/c/p01_grade_statistics/variant_reorder.c",
+      "seed": 125,
+      "report": {
+        "kind": "reorder",
+        "changes": 6,
+        "details": [
+          "inserted 5 prototype(s)",
+          "function order: calculate_mean, letter_grade, main, calculate_std_dev, calculate_median, find_topper"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "function definitions identical, only their order changed (+ prototypes)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p01_grade_statistics",
+      "kind": "loop_swap",
+      "source": "generated/c/p01_grade_statistics/original.c",
+      "path": "generated/c/p01_grade_statistics/variant_loop_swap.c",
+      "seed": 135,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 8,
+        "details": [
+          "line 13: for -> while",
+          "line 21: for -> while",
+          "line 25: for -> while",
+          "line 43: for -> while",
+          "line 66: for -> while",
+          "line 92: for -> while",
+          "line 96: for -> while",
+          "line 31: for -> while"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "identifiers and literals kept; 8 for loop(s) became while loop(s)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p01_grade_statistics",
+      "kind": "dead_code",
+      "source": "generated/c/p01_grade_statistics/original.c",
+      "path": "generated/c/p01_grade_statistics/variant_dead_code.c",
+      "seed": 145,
+      "report": {
+        "kind": "dead_code",
+        "changes": 7,
+        "details": [
+          "unused variable checksum in main()",
+          "unused variable epsilon in letter_grade()",
+          "unused variable status_flag in letter_grade()",
+          "unused variable unused_counter in calculate_median()",
+          "unused variable trace_on in letter_grade()",
+          "unused variable spare_bits in calculate_mean()",
+          "never-called helper safe_average()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "original token stream is a subsequence of the variant (insertions only)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p01_grade_statistics",
+      "kind": "combined",
+      "source": "generated/c/p01_grade_statistics/original.c",
+      "path": "generated/c/p01_grade_statistics/variant_combined.c",
+      "seed": 155,
+      "report": {
+        "kind": "combined",
+        "changes": 81,
+        "details": [
+          "rename: 22 change(s)",
+          "  calculate_mean -> work_out_average",
+          "  marks -> results",
+          "  n -> count_n",
+          "  total -> acc",
+          "  i -> pos",
+          "  calculate_median -> determine_mid_val",
+          "  sorted -> ordered",
+          "  j -> inner",
+          "  temp -> swap_val",
+          "  calculate_std_dev -> compute_spread",
+          "  mean -> avg",
+          "  squared_sum -> squared_acc_total",
+          "  letter_grade -> letter_band",
+          "  mark -> score",
+          "  find_topper -> locate_topper",
+          "  best -> leader",
+          "  names -> labels",
+          "  counts -> freq",
+          "  median -> mid_val",
+          "  std_dev -> spread",
+          "  g -> cur_g",
+          "  top -> peak",
+          "loop_swap: 8 change(s)",
+          "  line 13: for -> while",
+          "  line 21: for -> while",
+          "  line 25: for -> while",
+          "  line 43: for -> while",
+          "  line 66: for -> while",
+          "  line 92: for -> while",
+          "  line 96: for -> while",
+          "  line 31: for -> while",
+          "reorder: 6 change(s)",
+          "  inserted 5 prototype(s)",
+          "  function order: letter_band, work_out_average, locate_topper, main, compute_spread, determine_mid_val",
+          "dead_code: 6 change(s)",
+          "  unused variable checksum in compute_spread()",
+          "  unused variable ratio_hint in locate_topper()",
+          "  unused variable epsilon in locate_topper()",
+          "  unused variable unused_counter in determine_mid_val()",
+          "  unused variable debug_level in compute_spread()",
+          "  never-called helper safe_average()",
+          "comments_format: 39 change(s)",
+          "  removed 4 comment(s)",
+          "  added 8 comment(s)",
+          "  brace style knr -> allman",
+          "  blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged"
+        ]
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p02_matrix_operations",
+      "kind": "rename",
+      "source": "generated/python/p02_matrix_operations/original.py",
+      "path": "generated/python/p02_matrix_operations/variant_rename.py",
+      "seed": 200,
+      "report": {
+        "kind": "rename",
+        "changes": 23,
+        "details": [
+          "add_matrices -> append_grids",
+          "multiply_matrices -> times_tables",
+          "transpose -> transposed",
+          "determinant_3x3 -> det_3x3",
+          "print_matrix -> output_table",
+          "a -> first_val",
+          "b -> second_val",
+          "rows -> lines",
+          "cols -> columns",
+          "result -> answer",
+          "i -> pos",
+          "m -> cols_n",
+          "j -> inner",
+          "title -> the_title",
+          "row -> r_idx",
+          "c -> ch_val",
+          "d -> d_val",
+          "e -> entry_e",
+          "f -> local_f",
+          "g -> cur_g",
+          "h -> tmp_h",
+          "k -> step_no",
+          "value -> item"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 27
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p02_matrix_operations",
+      "kind": "comments_format",
+      "source": "generated/python/p02_matrix_operations/original.py",
+      "path": "generated/python/p02_matrix_operations/variant_comments_format.py",
+      "seed": 210,
+      "report": {
+        "kind": "comments_format",
+        "changes": 20,
+        "details": [
+          "removed about 0 comment(s) and 6 docstring(s)",
+          "added 14 new comment(s)",
+          "re-indented 4 -> 2 spaces",
+          "blank lines between top-level definitions: 2"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 27
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p02_matrix_operations",
+      "kind": "reorder",
+      "source": "generated/python/p02_matrix_operations/original.py",
+      "path": "generated/python/p02_matrix_operations/variant_reorder.py",
+      "seed": 220,
+      "report": {
+        "kind": "reorder",
+        "changes": 2,
+        "details": [
+          "function order: add_matrices, main, transpose, determinant_3x3, print_matrix, multiply_matrices"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 27
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p02_matrix_operations",
+      "kind": "loop_swap",
+      "source": "generated/python/p02_matrix_operations/original.py",
+      "path": "generated/python/p02_matrix_operations/variant_loop_swap.py",
+      "seed": 230,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 6,
+        "details": [
+          "line 15: for j in range(...) -> while loop",
+          "line 13: for i in range(...) -> while loop",
+          "line 28: for k in range(...) -> while loop",
+          "line 27: for j in range(...) -> while loop",
+          "line 26: for i in range(...) -> while loop",
+          "line 36: for j in range(...) -> while loop"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 27
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p02_matrix_operations",
+      "kind": "dead_code",
+      "source": "generated/python/p02_matrix_operations/original.py",
+      "path": "generated/python/p02_matrix_operations/variant_dead_code.py",
+      "seed": 240,
+      "report": {
+        "kind": "dead_code",
+        "changes": 7,
+        "details": [
+          "unused variable temp_buffer in multiply_matrices()",
+          "unused variable trace_level in determinant_3x3()",
+          "unused variable scale_factor in determinant_3x3()",
+          "unused variable debug_mode in transpose()",
+          "unused variable status_flag in main()",
+          "unused variable unused_total in main()",
+          "never-called helper split_into_chunks()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 27
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p02_matrix_operations",
+      "kind": "combined",
+      "source": "generated/python/p02_matrix_operations/original.py",
+      "path": "generated/python/p02_matrix_operations/variant_combined.py",
+      "seed": 250,
+      "report": {
+        "kind": "combined",
+        "changes": 59,
+        "details": [
+          "rename: 23 change(s)",
+          "  add_matrices -> append_grids",
+          "  multiply_matrices -> product_of_grids",
+          "  transpose -> flip_axes",
+          "  determinant_3x3 -> det_value_3x3",
+          "  print_matrix -> display_table",
+          "  a -> first_val",
+          "  b -> second_val",
+          "  rows -> height",
+          "  cols -> columns",
+          "  result -> answer",
+          "  i -> idx",
+          "  m -> width",
+          "  j -> jdx",
+          "  title -> tmp_title",
+          "  row -> r_idx",
+          "  c -> ch_val",
+          "  d -> d_val",
+          "  e -> elem_e",
+          "  f -> cur_f",
+          "  g -> the_g",
+          "  h -> the_h",
+          "  k -> kdx",
+          "  value -> item",
+          "loop_swap: 6 change(s)",
+          "  line 14: for jdx in range(...) -> while loop",
+          "  line 12: for idx in range(...) -> while loop",
+          "  line 26: for kdx in range(...) -> while loop",
+          "  line 25: for jdx in range(...) -> while loop",
+          "  line 24: for idx in range(...) -> while loop",
+          "  line 33: for jdx in range(...) -> while loop",
+          "reorder: 5 change(s)",
+          "  function order: main, det_value_3x3, product_of_grids, flip_axes, display_table, append_grids",
+          "dead_code: 6 change(s)",
+          "  unused variable checkpoint in det_value_3x3()",
+          "  unused variable max_attempts in product_of_grids()",
+          "  unused variable status_flag in append_grids()",
+          "  unused variable temp_buffer in main()",
+          "  unused variable trace_level in det_value_3x3()",
+          "  never-called helper normalise_values()",
+          "comments_format: 19 change(s)",
+          "  removed about 0 comment(s) and 6 docstring(s)",
+          "  added 13 new comment(s)",
+          "  re-indented 4 -> 2 spaces",
+          "  blank lines between top-level definitions: 2"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 27
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p02_matrix_operations",
+      "kind": "rename",
+      "source": "generated/c/p02_matrix_operations/original.c",
+      "path": "generated/c/p02_matrix_operations/variant_rename.c",
+      "seed": 205,
+      "report": {
+        "kind": "rename",
+        "changes": 17,
+        "details": [
+          "add_matrices -> put_grids",
+          "a -> lhs",
+          "b -> second_val",
+          "sum -> accumulated",
+          "i -> idx",
+          "j -> jdx",
+          "multiply_matrices -> times_tables",
+          "prod -> tmp_prod",
+          "k -> step_no",
+          "transpose_matrix -> flip_axes_table",
+          "m -> cols_n",
+          "t -> hold_t",
+          "determinant -> det_value",
+          "det -> det_val",
+          "print_matrix -> show_grid",
+          "title -> tmp_title",
+          "result -> answer"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "token stream identical up to a one-to-one identifier mapping (struct fields kept)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p02_matrix_operations",
+      "kind": "comments_format",
+      "source": "generated/c/p02_matrix_operations/original.c",
+      "path": "generated/c/p02_matrix_operations/variant_comments_format.c",
+      "seed": 215,
+      "report": {
+        "kind": "comments_format",
+        "changes": 19,
+        "details": [
+          "removed 6 comment(s)",
+          "added 7 comment(s)",
+          "brace style allman -> knr",
+          "blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "code tokens identical (only comments and layout changed)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p02_matrix_operations",
+      "kind": "reorder",
+      "source": "generated/c/p02_matrix_operations/original.c",
+      "path": "generated/c/p02_matrix_operations/variant_reorder.c",
+      "seed": 225,
+      "report": {
+        "kind": "reorder",
+        "changes": 6,
+        "details": [
+          "inserted 5 prototype(s)",
+          "function order: add_matrices, main, determinant, multiply_matrices, print_matrix, transpose_matrix"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "function definitions identical, only their order changed (+ prototypes)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p02_matrix_operations",
+      "kind": "loop_swap",
+      "source": "generated/c/p02_matrix_operations/original.c",
+      "path": "generated/c/p02_matrix_operations/variant_loop_swap.c",
+      "seed": 235,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 9,
+        "details": [
+          "line 12: for -> while",
+          "line 23: for -> while",
+          "line 37: for -> while",
+          "line 58: for -> while",
+          "line 14: for -> while",
+          "line 27: for -> while",
+          "line 43: for -> while",
+          "line 66: for -> while",
+          "line 32: for -> while"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "identifiers and literals kept; 9 for loop(s) became while loop(s)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p02_matrix_operations",
+      "kind": "dead_code",
+      "source": "generated/c/p02_matrix_operations/original.c",
+      "path": "generated/c/p02_matrix_operations/variant_dead_code.c",
+      "seed": 245,
+      "report": {
+        "kind": "dead_code",
+        "changes": 6,
+        "details": [
+          "unused variable trace_on in print_matrix()",
+          "unused variable debug_level in determinant()",
+          "unused variable checksum in main()",
+          "unused variable unused_counter in print_matrix()",
+          "unused variable spare_bits in print_matrix()",
+          "never-called helper clamp_value()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "original token stream is a subsequence of the variant (insertions only)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p02_matrix_operations",
+      "kind": "combined",
+      "source": "generated/c/p02_matrix_operations/original.c",
+      "path": "generated/c/p02_matrix_operations/variant_combined.c",
+      "seed": 255,
+      "report": {
+        "kind": "combined",
+        "changes": 57,
+        "details": [
+          "rename: 17 change(s)",
+          "  add_matrices -> put_tables",
+          "  a -> first_val",
+          "  b -> second_val",
+          "  sum -> accumulated",
+          "  i -> pos",
+          "  j -> inner",
+          "  multiply_matrices -> product_of_grids",
+          "  prod -> local_prod",
+          "  k -> step_no",
+          "  transpose_matrix -> transposed_table",
+          "  m -> cols_n",
+          "  t -> tmp_t",
+          "  determinant -> det_value",
+          "  det -> det_val",
+          "  print_matrix -> output_table",
+          "  title -> tmp_title",
+          "  result -> answer",
+          "loop_swap: 9 change(s)",
+          "  line 12: for -> while",
+          "  line 23: for -> while",
+          "  line 37: for -> while",
+          "  line 58: for -> while",
+          "  line 14: for -> while",
+          "  line 27: for -> while",
+          "  line 43: for -> while",
+          "  line 66: for -> while",
+          "  line 32: for -> while",
+          "reorder: 6 change(s)",
+          "  inserted 5 prototype(s)",
+          "  function order: product_of_grids, transposed_table, put_tables, output_table, det_value, main",
+          "dead_code: 4 change(s)",
+          "  unused variable epsilon in transposed_table()",
+          "  unused variable status_flag in put_tables()",
+          "  unused variable ratio_hint in product_of_grids()",
+          "  never-called helper clamp_value()",
+          "comments_format: 21 change(s)",
+          "  removed 6 comment(s)",
+          "  added 8 comment(s)",
+          "  brace style allman -> knr",
+          "  blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged"
+        ]
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p03_prime_numbers",
+      "kind": "rename",
+      "source": "generated/python/p03_prime_numbers/original.py",
+      "path": "generated/python/p03_prime_numbers/variant_rename.py",
+      "seed": 300,
+      "report": {
+        "kind": "rename",
+        "changes": 19,
+        "details": [
+          "sieve_of_eratosthenes -> filter_table_of_eratosthenes",
+          "collect_primes -> collect_prime_list",
+          "find_twin_primes -> get_twins_prime_list",
+          "is_prime -> has_primal",
+          "N -> size",
+          "NUMBERS_TO_CHECK -> NUMS_TO_TEST",
+          "limit -> bound",
+          "flags -> the_flags",
+          "start -> first",
+          "primes -> prime_list",
+          "number -> num",
+          "twins -> local_twins",
+          "i -> idx",
+          "n -> count_n",
+          "divisor -> local_divisor",
+          "pair -> tmp_pair",
+          "value -> val",
+          "multiple -> local_multiple",
+          "p -> cursor"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 22
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p03_prime_numbers",
+      "kind": "comments_format",
+      "source": "generated/python/p03_prime_numbers/original.py",
+      "path": "generated/python/p03_prime_numbers/variant_comments_format.py",
+      "seed": 310,
+      "report": {
+        "kind": "comments_format",
+        "changes": 19,
+        "details": [
+          "removed about 4 comment(s) and 5 docstring(s)",
+          "added 10 new comment(s)",
+          "re-indented 4 -> 2 spaces",
+          "blank lines between top-level definitions: 2"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 22
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p03_prime_numbers",
+      "kind": "reorder",
+      "source": "generated/python/p03_prime_numbers/original.py",
+      "path": "generated/python/p03_prime_numbers/variant_reorder.py",
+      "seed": 320,
+      "report": {
+        "kind": "reorder",
+        "changes": 5,
+        "details": [
+          "function order: collect_primes, find_twin_primes, main, sieve_of_eratosthenes, is_prime"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 22
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p03_prime_numbers",
+      "kind": "loop_swap",
+      "source": "generated/python/p03_prime_numbers/original.py",
+      "path": "generated/python/p03_prime_numbers/variant_loop_swap.py",
+      "seed": 330,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 2,
+        "details": [
+          "line 32: for number in range(...) -> while loop",
+          "line 41: for i in range(...) -> while loop"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 22
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p03_prime_numbers",
+      "kind": "dead_code",
+      "source": "generated/python/p03_prime_numbers/original.py",
+      "path": "generated/python/p03_prime_numbers/variant_dead_code.py",
+      "seed": 340,
+      "report": {
+        "kind": "dead_code",
+        "changes": 4,
+        "details": [
+          "unused variable debug_mode in sieve_of_eratosthenes()",
+          "unused variable unused_total in is_prime()",
+          "unused variable scale_factor in sieve_of_eratosthenes()",
+          "never-called helper normalise_values()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 22
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p03_prime_numbers",
+      "kind": "combined",
+      "source": "generated/python/p03_prime_numbers/original.py",
+      "path": "generated/python/p03_prime_numbers/variant_combined.py",
+      "seed": 350,
+      "report": {
+        "kind": "combined",
+        "changes": 52,
+        "details": [
+          "rename: 19 change(s)",
+          "  sieve_of_eratosthenes -> marks_table_of_eratosthenes",
+          "  collect_primes -> collect_prime_list",
+          "  find_twin_primes -> search_paired_prime_list",
+          "  is_prime -> has_primal",
+          "  N -> count_n",
+          "  NUMBERS_TO_CHECK -> VALUES_TO_VALIDATE",
+          "  limit -> upper",
+          "  flags -> cur_flags",
+          "  start -> first",
+          "  primes -> prime_list",
+          "  number -> num",
+          "  twins -> the_twins",
+          "  i -> pos",
+          "  n -> size",
+          "  divisor -> tmp_divisor",
+          "  pair -> the_pair",
+          "  value -> item",
+          "  multiple -> tmp_multiple",
+          "  p -> ptr",
+          "loop_swap: 2 change(s)",
+          "  line 27: for num in range(...) -> while loop",
+          "  line 35: for pos in range(...) -> while loop",
+          "reorder: 5 change(s)",
+          "  function order: has_primal, marks_table_of_eratosthenes, main, search_paired_prime_list, collect_prime_list",
+          "dead_code: 7 change(s)",
+          "  unused variable debug_mode in search_paired_prime_list()",
+          "  unused variable log_prefix in search_paired_prime_list()",
+          "  unused variable spare_items in has_primal()",
+          "  unused variable max_attempts in main()",
+          "  unused variable status_flag in has_primal()",
+          "  unused variable cache_hits in has_primal()",
+          "  never-called helper normalise_values()",
+          "comments_format: 19 change(s)",
+          "  removed about 0 comment(s) and 5 docstring(s)",
+          "  added 14 new comment(s)",
+          "  re-indented 4 -> 2 spaces",
+          "  blank lines between top-level definitions: 0"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 22
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p03_prime_numbers",
+      "kind": "rename",
+      "source": "generated/c/p03_prime_numbers/original.c",
+      "path": "generated/c/p03_prime_numbers/variant_rename.c",
+      "seed": 305,
+      "report": {
+        "kind": "rename",
+        "changes": 16,
+        "details": [
+          "sieve_of_eratosthenes -> marks_table_of_eratosthenes",
+          "is_prime -> has_prm",
+          "limit -> bound",
+          "i -> pos",
+          "multiple -> my_multiple",
+          "collect_primes -> collect_prime_list",
+          "primes -> prms",
+          "count -> amount",
+          "print_twin_primes -> display_twins_prime_list",
+          "pairs -> the_pairs",
+          "is_prime_number -> has_prm_value",
+          "n -> size",
+          "d -> d_val",
+          "checks -> the_checks",
+          "num_checks -> val_checks",
+          "twins -> tmp_twins"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "token stream identical up to a one-to-one identifier mapping (struct fields kept)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p03_prime_numbers",
+      "kind": "comments_format",
+      "source": "generated/c/p03_prime_numbers/original.c",
+      "path": "generated/c/p03_prime_numbers/variant_comments_format.c",
+      "seed": 315,
+      "report": {
+        "kind": "comments_format",
+        "changes": 17,
+        "details": [
+          "removed 6 comment(s)",
+          "added 6 comment(s)",
+          "brace style allman -> knr",
+          "blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "code tokens identical (only comments and layout changed)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p03_prime_numbers",
+      "kind": "reorder",
+      "source": "generated/c/p03_prime_numbers/original.c",
+      "path": "generated/c/p03_prime_numbers/variant_reorder.c",
+      "seed": 325,
+      "report": {
+        "kind": "reorder",
+        "changes": 5,
+        "details": [
+          "inserted 4 prototype(s)",
+          "function order: collect_primes, is_prime_number, print_twin_primes, sieve_of_eratosthenes, main"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "function definitions identical, only their order changed (+ prototypes)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p03_prime_numbers",
+      "kind": "loop_swap",
+      "source": "generated/c/p03_prime_numbers/original.c",
+      "path": "generated/c/p03_prime_numbers/variant_loop_swap.c",
+      "seed": 335,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 8,
+        "details": [
+          "line 16: for -> while",
+          "line 20: for -> while",
+          "line 35: for -> while",
+          "line 50: for -> while",
+          "line 70: for -> while",
+          "line 89: for -> while",
+          "line 99: for -> while",
+          "line 25: for -> while"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "identifiers and literals kept; 8 for loop(s) became while loop(s)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p03_prime_numbers",
+      "kind": "dead_code",
+      "source": "generated/c/p03_prime_numbers/original.c",
+      "path": "generated/c/p03_prime_numbers/variant_dead_code.c",
+      "seed": 345,
+      "report": {
+        "kind": "dead_code",
+        "changes": 7,
+        "details": [
+          "unused variable checksum in print_twin_primes()",
+          "unused variable ratio_hint in main()",
+          "unused variable debug_level in main()",
+          "unused variable trace_on in collect_primes()",
+          "unused variable unused_counter in sieve_of_eratosthenes()",
+          "unused variable spare_bits in print_twin_primes()",
+          "never-called helper index_of_largest()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "original token stream is a subsequence of the variant (insertions only)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p03_prime_numbers",
+      "kind": "combined",
+      "source": "generated/c/p03_prime_numbers/original.c",
+      "path": "generated/c/p03_prime_numbers/variant_combined.c",
+      "seed": 355,
+      "report": {
+        "kind": "combined",
+        "changes": 54,
+        "details": [
+          "rename: 16 change(s)",
+          "  sieve_of_eratosthenes -> marks_table_of_eratosthenes",
+          "  is_prime -> check_primal",
+          "  limit -> upper",
+          "  i -> idx",
+          "  multiple -> the_multiple",
+          "  collect_primes -> collect_prms",
+          "  primes -> prms",
+          "  count -> num",
+          "  print_twin_primes -> show_twins_prime_list",
+          "  pairs -> local_pairs",
+          "  is_prime_number -> check_prm_value",
+          "  n -> size",
+          "  d -> divisor",
+          "  checks -> my_checks",
+          "  num_checks -> number_checks",
+          "  twins -> cur_twins",
+          "loop_swap: 8 change(s)",
+          "  line 16: for -> while",
+          "  line 20: for -> while",
+          "  line 35: for -> while",
+          "  line 50: for -> while",
+          "  line 70: for -> while",
+          "  line 89: for -> while",
+          "  line 99: for -> while",
+          "  line 25: for -> while",
+          "reorder: 5 change(s)",
+          "  inserted 4 prototype(s)",
+          "  function order: check_prm_value, main, show_twins_prime_list, collect_prms, marks_table_of_eratosthenes",
+          "dead_code: 6 change(s)",
+          "  unused variable ratio_hint in collect_prms()",
+          "  unused variable debug_level in marks_table_of_eratosthenes()",
+          "  unused variable retry_limit in collect_prms()",
+          "  unused variable unused_counter in show_twins_prime_list()",
+          "  unused variable spare_bits in check_prm_value()",
+          "  never-called helper index_of_largest()",
+          "comments_format: 19 change(s)",
+          "  removed 6 comment(s)",
+          "  added 7 comment(s)",
+          "  brace style allman -> knr",
+          "  blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged"
+        ]
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p04_string_analysis",
+      "kind": "rename",
+      "source": "generated/python/p04_string_analysis/original.py",
+      "path": "generated/python/p04_string_analysis/variant_rename.py",
+      "seed": 400,
+      "report": {
+        "kind": "rename",
+        "changes": 20,
+        "details": [
+          "clean_text -> clean_content",
+          "is_palindrome -> check_symmetric",
+          "count_vowels_consonants -> num_nv_nc",
+          "word_frequency -> token_occurrences",
+          "reverse_words -> flip_tokens",
+          "VOWELS -> NV",
+          "PUNCTUATION -> CUR_PUNCTUATION",
+          "text -> content",
+          "result -> answer",
+          "ch -> letter",
+          "cleaned -> cur_cleaned",
+          "vowels -> vowel_count",
+          "consonants -> consonant_count",
+          "i -> pos",
+          "freq -> frequency",
+          "word -> token",
+          "words -> terms",
+          "samples -> local_samples",
+          "number -> value",
+          "sentence -> the_sentence"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 53
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p04_string_analysis",
+      "kind": "comments_format",
+      "source": "generated/python/p04_string_analysis/original.py",
+      "path": "generated/python/p04_string_analysis/variant_comments_format.py",
+      "seed": 410,
+      "report": {
+        "kind": "comments_format",
+        "changes": 16,
+        "details": [
+          "removed about 4 comment(s) and 1 docstring(s)",
+          "added 11 new comment(s)",
+          "re-indented 4 -> 2 spaces",
+          "blank lines between top-level definitions: 2"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 53
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p04_string_analysis",
+      "kind": "reorder",
+      "source": "generated/python/p04_string_analysis/original.py",
+      "path": "generated/python/p04_string_analysis/variant_reorder.py",
+      "seed": 420,
+      "report": {
+        "kind": "reorder",
+        "changes": 6,
+        "details": [
+          "function order: count_vowels_consonants, main, clean_text, reverse_words, word_frequency, is_palindrome"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 53
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p04_string_analysis",
+      "kind": "loop_swap",
+      "source": "generated/python/p04_string_analysis/original.py",
+      "path": "generated/python/p04_string_analysis/variant_loop_swap.py",
+      "seed": 430,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 1,
+        "details": [
+          "line 29: for i in range(...) -> while loop"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 53
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p04_string_analysis",
+      "kind": "dead_code",
+      "source": "generated/python/p04_string_analysis/original.py",
+      "path": "generated/python/p04_string_analysis/variant_dead_code.py",
+      "seed": 440,
+      "report": {
+        "kind": "dead_code",
+        "changes": 6,
+        "details": [
+          "unused variable scale_factor in word_frequency()",
+          "unused variable spare_items in count_vowels_consonants()",
+          "unused variable temp_buffer in reverse_words()",
+          "unused variable cache_hits in is_palindrome()",
+          "unused variable max_attempts in clean_text()",
+          "never-called helper normalise_values()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 53
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p04_string_analysis",
+      "kind": "combined",
+      "source": "generated/python/p04_string_analysis/original.py",
+      "path": "generated/python/p04_string_analysis/variant_combined.py",
+      "seed": 450,
+      "report": {
+        "kind": "combined",
+        "changes": 45,
+        "details": [
+          "rename: 20 change(s)",
+          "  clean_text -> clean_content",
+          "  is_palindrome -> has_mirror",
+          "  count_vowels_consonants -> num_vowel_count_consonant_count",
+          "  word_frequency -> token_freq",
+          "  reverse_words -> invert_terms",
+          "  VOWELS -> VOWEL_COUNT",
+          "  PUNCTUATION -> MY_PUNCTUATION",
+          "  text -> content",
+          "  result -> outcome",
+          "  ch -> letter",
+          "  cleaned -> the_cleaned",
+          "  vowels -> nv",
+          "  consonants -> nc",
+          "  i -> pos",
+          "  freq -> counts",
+          "  word -> term",
+          "  words -> terms",
+          "  samples -> my_samples",
+          "  number -> num",
+          "  sentence -> cur_sentence",
+          "loop_swap: 1 change(s)",
+          "  line 24: for pos in range(...) -> while loop",
+          "reorder: 6 change(s)",
+          "  function order: invert_terms, clean_content, has_mirror, main, num_vowel_count_consonant_count, token_freq",
+          "dead_code: 5 change(s)",
+          "  unused variable unused_total in num_vowel_count_consonant_count()",
+          "  unused variable status_flag in invert_terms()",
+          "  unused variable debug_mode in main()",
+          "  unused variable log_prefix in main()",
+          "  never-called helper clamp_value()",
+          "comments_format: 13 change(s)",
+          "  removed about 0 comment(s) and 1 docstring(s)",
+          "  added 12 new comment(s)",
+          "  re-indented 4 -> 2 spaces",
+          "  blank lines between top-level definitions: 2"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 53
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p04_string_analysis",
+      "kind": "rename",
+      "source": "generated/c/p04_string_analysis/original.c",
+      "path": "generated/c/p04_string_analysis/variant_rename.c",
+      "seed": 405,
+      "report": {
+        "kind": "rename",
+        "changes": 23,
+        "details": [
+          "is_palindrome -> check_symmetric",
+          "text -> sentence",
+          "clean -> the_clean",
+          "n -> size",
+          "i -> idx",
+          "count_letters -> tally_letters",
+          "vowels -> nv",
+          "consonants -> consonant_count",
+          "c -> third_val",
+          "word_frequency -> term_freq",
+          "words -> terms",
+          "counts -> tallies",
+          "buffer -> local_buffer",
+          "token -> cur_token",
+          "total -> acc",
+          "found -> hit",
+          "print_reversed -> display_flipped",
+          "parts -> tmp_parts",
+          "samples -> tmp_samples",
+          "sample_count -> sample_tally",
+          "s -> line_s",
+          "w -> width_w",
+          "distinct -> my_distinct"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "token stream identical up to a one-to-one identifier mapping (struct fields kept)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p04_string_analysis",
+      "kind": "comments_format",
+      "source": "generated/c/p04_string_analysis/original.c",
+      "path": "generated/c/p04_string_analysis/variant_comments_format.c",
+      "seed": 415,
+      "report": {
+        "kind": "comments_format",
+        "changes": 26,
+        "details": [
+          "removed 5 comment(s)",
+          "added 6 comment(s)",
+          "brace style knr -> allman",
+          "blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "code tokens identical (only comments and layout changed)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p04_string_analysis",
+      "kind": "reorder",
+      "source": "generated/c/p04_string_analysis/original.c",
+      "path": "generated/c/p04_string_analysis/variant_reorder.c",
+      "seed": 425,
+      "report": {
+        "kind": "reorder",
+        "changes": 5,
+        "details": [
+          "inserted 4 prototype(s)",
+          "function order: is_palindrome, count_letters, word_frequency, main, print_reversed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "function definitions identical, only their order changed (+ prototypes)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p04_string_analysis",
+      "kind": "loop_swap",
+      "source": "generated/c/p04_string_analysis/original.c",
+      "path": "generated/c/p04_string_analysis/variant_loop_swap.c",
+      "seed": 435,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 8,
+        "details": [
+          "line 16: for -> while",
+          "line 20: for -> while",
+          "line 31: for -> while",
+          "line 44: for -> while",
+          "line 50: for -> while",
+          "line 77: for -> while",
+          "line 93: for -> while",
+          "line 117: for -> while"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "identifiers and literals kept; 8 for loop(s) became while loop(s)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p04_string_analysis",
+      "kind": "dead_code",
+      "source": "generated/c/p04_string_analysis/original.c",
+      "path": "generated/c/p04_string_analysis/variant_dead_code.c",
+      "seed": 445,
+      "report": {
+        "kind": "dead_code",
+        "changes": 6,
+        "details": [
+          "unused variable checksum in is_palindrome()",
+          "unused variable epsilon in word_frequency()",
+          "unused variable status_flag in is_palindrome()",
+          "unused variable unused_counter in is_palindrome()",
+          "unused variable spare_bits in main()",
+          "never-called helper index_of_largest()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "original token stream is a subsequence of the variant (insertions only)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p04_string_analysis",
+      "kind": "combined",
+      "source": "generated/c/p04_string_analysis/original.c",
+      "path": "generated/c/p04_string_analysis/variant_combined.c",
+      "seed": 455,
+      "report": {
+        "kind": "combined",
+        "changes": 72,
+        "details": [
+          "rename: 23 change(s)",
+          "  is_palindrome -> has_mirror",
+          "  text -> content",
+          "  clean -> the_clean",
+          "  n -> count_n",
+          "  i -> pos",
+          "  count_letters -> num_letters",
+          "  vowels -> vowel_count",
+          "  consonants -> consonant_count",
+          "  c -> third_val",
+          "  word_frequency -> term_freq",
+          "  words -> terms",
+          "  counts -> tallies",
+          "  buffer -> tmp_buffer",
+          "  token -> cur_token",
+          "  total -> grand",
+          "  found -> hit",
+          "  print_reversed -> output_flipped",
+          "  parts -> tmp_parts",
+          "  samples -> local_samples",
+          "  sample_count -> sample_amount",
+          "  s -> line_s",
+          "  w -> width_w",
+          "  distinct -> the_distinct",
+          "loop_swap: 8 change(s)",
+          "  line 16: for -> while",
+          "  line 20: for -> while",
+          "  line 31: for -> while",
+          "  line 44: for -> while",
+          "  line 50: for -> while",
+          "  line 77: for -> while",
+          "  line 93: for -> while",
+          "  line 117: for -> while",
+          "reorder: 5 change(s)",
+          "  inserted 4 prototype(s)",
+          "  function order: term_freq, has_mirror, num_letters, main, output_flipped",
+          "dead_code: 4 change(s)",
+          "  unused variable ratio_hint in main()",
+          "  unused variable epsilon in has_mirror()",
+          "  unused variable retry_limit in output_flipped()",
+          "  never-called helper clamp_value()",
+          "comments_format: 32 change(s)",
+          "  removed 5 comment(s)",
+          "  added 7 comment(s)",
+          "  brace style knr -> allman",
+          "  blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged"
+        ]
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p05_bank_account",
+      "kind": "rename",
+      "source": "generated/python/p05_bank_account/original.py",
+      "path": "generated/python/p05_bank_account/variant_rename.py",
+      "seed": 500,
+      "report": {
+        "kind": "rename",
+        "changes": 20,
+        "details": [
+          "create_account -> create_acct",
+          "deposit -> put_in",
+          "withdraw -> take_out",
+          "add_interest -> append_growth",
+          "print_log -> output_history",
+          "INTEREST_RATE -> GROWTH_PCT",
+          "number -> num",
+          "owner -> cur_owner",
+          "opening_balance -> opening_amount_left",
+          "account -> acct",
+          "amount -> money",
+          "log -> journal",
+          "interest -> growth",
+          "i -> idx",
+          "accounts -> accts",
+          "operations -> the_operations",
+          "index -> pos",
+          "action -> tmp_action",
+          "kind -> cur_kind",
+          "status -> local_status"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 15
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p05_bank_account",
+      "kind": "comments_format",
+      "source": "generated/python/p05_bank_account/original.py",
+      "path": "generated/python/p05_bank_account/variant_comments_format.py",
+      "seed": 510,
+      "report": {
+        "kind": "comments_format",
+        "changes": 20,
+        "details": [
+          "removed about 3 comment(s) and 6 docstring(s)",
+          "added 11 new comment(s)",
+          "re-indented 4 -> 2 spaces",
+          "blank lines between top-level definitions: 0"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 15
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p05_bank_account",
+      "kind": "reorder",
+      "source": "generated/python/p05_bank_account/original.py",
+      "path": "generated/python/p05_bank_account/variant_reorder.py",
+      "seed": 520,
+      "report": {
+        "kind": "reorder",
+        "changes": 6,
+        "details": [
+          "function order: add_interest, main, print_log, withdraw, create_account, deposit"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 15
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p05_bank_account",
+      "kind": "loop_swap",
+      "source": "generated/python/p05_bank_account/original.py",
+      "path": "generated/python/p05_bank_account/variant_loop_swap.py",
+      "seed": 530,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 1,
+        "details": [
+          "line 41: for i in range(...) -> while loop"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 15
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p05_bank_account",
+      "kind": "dead_code",
+      "source": "generated/python/p05_bank_account/original.py",
+      "path": "generated/python/p05_bank_account/variant_dead_code.py",
+      "seed": 540,
+      "report": {
+        "kind": "dead_code",
+        "changes": 4,
+        "details": [
+          "unused variable spare_items in add_interest()",
+          "unused variable log_prefix in print_log()",
+          "unused variable max_attempts in withdraw()",
+          "never-called helper normalise_values()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 15
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p05_bank_account",
+      "kind": "combined",
+      "source": "generated/python/p05_bank_account/original.py",
+      "path": "generated/python/p05_bank_account/variant_combined.py",
+      "seed": 550,
+      "report": {
+        "kind": "combined",
+        "changes": 52,
+        "details": [
+          "rename: 20 change(s)",
+          "  create_account -> create_wallet",
+          "  deposit -> put_in",
+          "  withdraw -> debit",
+          "  add_interest -> insert_yield_amt",
+          "  print_log -> show_history",
+          "  INTEREST_RATE -> YIELD_AMT_RATIO",
+          "  number -> value",
+          "  owner -> my_owner",
+          "  opening_balance -> opening_funds",
+          "  account -> acct",
+          "  amount -> sum_value",
+          "  log -> history",
+          "  interest -> yield_amt",
+          "  i -> idx",
+          "  accounts -> wallets",
+          "  operations -> the_operations",
+          "  index -> position",
+          "  action -> the_action",
+          "  kind -> tmp_kind",
+          "  status -> the_status",
+          "loop_swap: 1 change(s)",
+          "  line 35: for idx in range(...) -> while loop",
+          "reorder: 5 change(s)",
+          "  function order: insert_yield_amt, debit, put_in, main, show_history, create_wallet",
+          "dead_code: 7 change(s)",
+          "  unused variable log_prefix in debit()",
+          "  unused variable unused_total in insert_yield_amt()",
+          "  unused variable checkpoint in main()",
+          "  unused variable spare_items in put_in()",
+          "  unused variable temp_buffer in main()",
+          "  unused variable scale_factor in show_history()",
+          "  never-called helper split_into_chunks()",
+          "comments_format: 19 change(s)",
+          "  removed about 0 comment(s) and 6 docstring(s)",
+          "  added 13 new comment(s)",
+          "  re-indented 4 -> 2 spaces",
+          "  blank lines between top-level definitions: 3"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 15
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p05_bank_account",
+      "kind": "rename",
+      "source": "generated/c/p05_bank_account/original.c",
+      "path": "generated/c/p05_bank_account/variant_rename.c",
+      "seed": 505,
+      "report": {
+        "kind": "rename",
+        "changes": 15,
+        "details": [
+          "log_book -> journal_book",
+          "log_count -> history_tally",
+          "record -> cur_record",
+          "number -> value",
+          "type -> cur_type",
+          "amount -> sum_value",
+          "status -> my_status",
+          "deposit -> credit",
+          "acc -> tmp_acc",
+          "withdraw -> take_out",
+          "add_interest -> put_yield_amt",
+          "interest -> yield_amt",
+          "print_log -> show_journal",
+          "i -> idx",
+          "accounts -> accts"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "token stream identical up to a one-to-one identifier mapping (struct fields kept)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p05_bank_account",
+      "kind": "comments_format",
+      "source": "generated/c/p05_bank_account/original.c",
+      "path": "generated/c/p05_bank_account/variant_comments_format.c",
+      "seed": 515,
+      "report": {
+        "kind": "comments_format",
+        "changes": 16,
+        "details": [
+          "removed 3 comment(s)",
+          "added 7 comment(s)",
+          "brace style allman -> knr",
+          "blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "code tokens identical (only comments and layout changed)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p05_bank_account",
+      "kind": "reorder",
+      "source": "generated/c/p05_bank_account/original.c",
+      "path": "generated/c/p05_bank_account/variant_reorder.c",
+      "seed": 525,
+      "report": {
+        "kind": "reorder",
+        "changes": 6,
+        "details": [
+          "inserted 5 prototype(s)",
+          "function order: main, record, withdraw, print_log, deposit, add_interest"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "function definitions identical, only their order changed (+ prototypes)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p05_bank_account",
+      "kind": "loop_swap",
+      "source": "generated/c/p05_bank_account/original.c",
+      "path": "generated/c/p05_bank_account/variant_loop_swap.c",
+      "seed": 535,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 3,
+        "details": [
+          "line 70: for -> while",
+          "line 92: for -> while",
+          "line 98: for -> while"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "identifiers and literals kept; 3 for loop(s) became while loop(s)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p05_bank_account",
+      "kind": "dead_code",
+      "source": "generated/c/p05_bank_account/original.c",
+      "path": "generated/c/p05_bank_account/variant_dead_code.c",
+      "seed": 545,
+      "report": {
+        "kind": "dead_code",
+        "changes": 7,
+        "details": [
+          "unused variable checksum in record()",
+          "unused variable trace_on in add_interest()",
+          "unused variable status_flag in print_log()",
+          "unused variable ratio_hint in add_interest()",
+          "unused variable retry_limit in withdraw()",
+          "unused variable epsilon in main()",
+          "never-called helper index_of_largest()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "original token stream is a subsequence of the variant (insertions only)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p05_bank_account",
+      "kind": "combined",
+      "source": "generated/c/p05_bank_account/original.c",
+      "path": "generated/c/p05_bank_account/variant_combined.c",
+      "seed": 555,
+      "report": {
+        "kind": "combined",
+        "changes": 48,
+        "details": [
+          "rename: 15 change(s)",
+          "  log_book -> journal_book",
+          "  log_count -> history_num",
+          "  record -> tmp_record",
+          "  number -> value",
+          "  type -> local_type",
+          "  amount -> sum_value",
+          "  status -> cur_status",
+          "  deposit -> credit",
+          "  acc -> local_acc",
+          "  withdraw -> debit",
+          "  add_interest -> append_yield_amt",
+          "  interest -> growth",
+          "  print_log -> output_history",
+          "  i -> idx",
+          "  accounts -> accts",
+          "loop_swap: 3 change(s)",
+          "  line 70: for -> while",
+          "  line 92: for -> while",
+          "  line 98: for -> while",
+          "reorder: 6 change(s)",
+          "  inserted 5 prototype(s)",
+          "  function order: tmp_record, debit, credit, output_history, main, append_yield_amt",
+          "dead_code: 6 change(s)",
+          "  unused variable unused_counter in append_yield_amt()",
+          "  unused variable epsilon in credit()",
+          "  unused variable trace_on in output_history()",
+          "  unused variable retry_limit in append_yield_amt()",
+          "  unused variable debug_level in main()",
+          "  never-called helper clamp_value()",
+          "comments_format: 18 change(s)",
+          "  removed 3 comment(s)",
+          "  added 8 comment(s)",
+          "  brace style allman -> knr",
+          "  blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged"
+        ]
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p06_sort_and_search",
+      "kind": "rename",
+      "source": "generated/python/p06_sort_and_search/original.py",
+      "path": "generated/python/p06_sort_and_search/variant_rename.py",
+      "seed": 600,
+      "report": {
+        "kind": "rename",
+        "changes": 23,
+        "details": [
+          "selection_sort -> selection_order",
+          "binary_search -> base2_lookup",
+          "print_list -> show_seq",
+          "values -> items",
+          "data -> dataset",
+          "comparisons -> compares",
+          "n -> size",
+          "i -> pos",
+          "target -> wanted",
+          "low -> lo",
+          "high -> hi",
+          "title -> tmp_title",
+          "roll_numbers -> roll_values",
+          "targets -> local_targets",
+          "total -> grand",
+          "smallest -> the_smallest",
+          "j -> jdx",
+          "mid -> centre",
+          "sorted_rolls -> ordered_rolls",
+          "sort_comparisons -> arrange_steps",
+          "index -> position",
+          "count -> amount",
+          "x -> num_x"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 10
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p06_sort_and_search",
+      "kind": "comments_format",
+      "source": "generated/python/p06_sort_and_search/original.py",
+      "path": "generated/python/p06_sort_and_search/variant_comments_format.py",
+      "seed": 610,
+      "report": {
+        "kind": "comments_format",
+        "changes": 17,
+        "details": [
+          "removed about 2 comment(s) and 4 docstring(s)",
+          "added 11 new comment(s)",
+          "re-indented 4 -> 2 spaces",
+          "blank lines between top-level definitions: 3"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 10
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p06_sort_and_search",
+      "kind": "reorder",
+      "source": "generated/python/p06_sort_and_search/original.py",
+      "path": "generated/python/p06_sort_and_search/variant_reorder.py",
+      "seed": 620,
+      "report": {
+        "kind": "reorder",
+        "changes": 2,
+        "details": [
+          "function order: print_list, binary_search, selection_sort, main"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 10
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p06_sort_and_search",
+      "kind": "loop_swap",
+      "source": "generated/python/p06_sort_and_search/original.py",
+      "path": "generated/python/p06_sort_and_search/variant_loop_swap.py",
+      "seed": 630,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 2,
+        "details": [
+          "line 21: for j in range(...) -> while loop",
+          "line 18: for i in range(...) -> while loop"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 10
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p06_sort_and_search",
+      "kind": "dead_code",
+      "source": "generated/python/p06_sort_and_search/original.py",
+      "path": "generated/python/p06_sort_and_search/variant_dead_code.py",
+      "seed": 640,
+      "report": {
+        "kind": "dead_code",
+        "changes": 7,
+        "details": [
+          "unused variable retry_limit in selection_sort()",
+          "unused variable trace_level in binary_search()",
+          "unused variable unused_total in selection_sort()",
+          "unused variable checkpoint in print_list()",
+          "unused variable spare_items in selection_sort()",
+          "unused variable max_attempts in binary_search()",
+          "never-called helper normalise_values()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 10
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p06_sort_and_search",
+      "kind": "combined",
+      "source": "generated/python/p06_sort_and_search/original.py",
+      "path": "generated/python/p06_sort_and_search/variant_combined.py",
+      "seed": 650,
+      "report": {
+        "kind": "combined",
+        "changes": 46,
+        "details": [
+          "rename: 23 change(s)",
+          "  selection_sort -> selection_order",
+          "  binary_search -> bin_lookup",
+          "  print_list -> output_seq",
+          "  values -> vals",
+          "  data -> items",
+          "  comparisons -> steps",
+          "  n -> size",
+          "  i -> idx",
+          "  target -> wanted",
+          "  low -> lo",
+          "  high -> upper",
+          "  title -> cur_title",
+          "  roll_numbers -> roll_nums",
+          "  targets -> local_targets",
+          "  total -> acc",
+          "  smallest -> tmp_smallest",
+          "  j -> jdx",
+          "  mid -> centre",
+          "  sorted_rolls -> ordered_rolls",
+          "  sort_comparisons -> arrange_compares",
+          "  index -> position",
+          "  count -> tally",
+          "  x -> val",
+          "loop_swap: 2 change(s)",
+          "  line 19: for jdx in range(...) -> while loop",
+          "  line 17: for idx in range(...) -> while loop",
+          "reorder: 3 change(s)",
+          "  function order: main, selection_order, output_seq, bin_lookup",
+          "dead_code: 4 change(s)",
+          "  unused variable status_flag in selection_order()",
+          "  unused variable spare_items in selection_order()",
+          "  unused variable scale_factor in main()",
+          "  never-called helper clamp_value()",
+          "comments_format: 14 change(s)",
+          "  removed about 0 comment(s) and 4 docstring(s)",
+          "  added 10 new comment(s)",
+          "  re-indented 4 -> 2 spaces",
+          "  blank lines between top-level definitions: 2"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 10
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p06_sort_and_search",
+      "kind": "rename",
+      "source": "generated/c/p06_sort_and_search/original.c",
+      "path": "generated/c/p06_sort_and_search/variant_rename.c",
+      "seed": 605,
+      "report": {
+        "kind": "rename",
+        "changes": 22,
+        "details": [
+          "print_array -> output_data",
+          "label -> tmp_label",
+          "arr -> data",
+          "n -> count_n",
+          "i -> pos",
+          "bubble_sort -> bubble_arrange",
+          "comparisons -> steps",
+          "pass -> tmp_pass",
+          "swapped -> my_swapped",
+          "j -> inner",
+          "temp -> tmp",
+          "binary_search -> base2_lookup",
+          "key -> target",
+          "low -> lower",
+          "high -> hi",
+          "mid -> middle",
+          "marks -> points",
+          "keys -> local_keys",
+          "key_count -> needle_tally",
+          "sort_cmp -> arrange_cmp",
+          "k -> step_no",
+          "search_cmp -> seek_cmp"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "token stream identical up to a one-to-one identifier mapping (struct fields kept)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p06_sort_and_search",
+      "kind": "comments_format",
+      "source": "generated/c/p06_sort_and_search/original.c",
+      "path": "generated/c/p06_sort_and_search/variant_comments_format.c",
+      "seed": 615,
+      "report": {
+        "kind": "comments_format",
+        "changes": 14,
+        "details": [
+          "removed 5 comment(s)",
+          "added 5 comment(s)",
+          "brace style allman -> knr",
+          "blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "code tokens identical (only comments and layout changed)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p06_sort_and_search",
+      "kind": "reorder",
+      "source": "generated/c/p06_sort_and_search/original.c",
+      "path": "generated/c/p06_sort_and_search/variant_reorder.c",
+      "seed": 625,
+      "report": {
+        "kind": "reorder",
+        "changes": 4,
+        "details": [
+          "inserted 3 prototype(s)",
+          "function order: binary_search, bubble_sort, print_array, main"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "function definitions identical, only their order changed (+ prototypes)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p06_sort_and_search",
+      "kind": "loop_swap",
+      "source": "generated/c/p06_sort_and_search/original.c",
+      "path": "generated/c/p06_sort_and_search/variant_loop_swap.c",
+      "seed": 635,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 4,
+        "details": [
+          "line 14: for -> while",
+          "line 24: for -> while",
+          "line 75: for -> while",
+          "line 29: for -> while"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "identifiers and literals kept; 4 for loop(s) became while loop(s)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p06_sort_and_search",
+      "kind": "dead_code",
+      "source": "generated/c/p06_sort_and_search/original.c",
+      "path": "generated/c/p06_sort_and_search/variant_dead_code.c",
+      "seed": 645,
+      "report": {
+        "kind": "dead_code",
+        "changes": 4,
+        "details": [
+          "unused variable status_flag in print_array()",
+          "unused variable unused_counter in bubble_sort()",
+          "unused variable retry_limit in print_array()",
+          "never-called helper index_of_largest()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "original token stream is a subsequence of the variant (insertions only)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p06_sort_and_search",
+      "kind": "combined",
+      "source": "generated/c/p06_sort_and_search/original.c",
+      "path": "generated/c/p06_sort_and_search/variant_combined.c",
+      "seed": 655,
+      "report": {
+        "kind": "combined",
+        "changes": 51,
+        "details": [
+          "rename: 22 change(s)",
+          "  print_array -> output_arr",
+          "  label -> the_label",
+          "  arr -> array",
+          "  n -> size",
+          "  i -> idx",
+          "  bubble_sort -> bubble_arrange",
+          "  comparisons -> compares",
+          "  pass -> cur_pass",
+          "  swapped -> the_swapped",
+          "  j -> inner",
+          "  temp -> tmp",
+          "  binary_search -> bin_seek",
+          "  key -> needle",
+          "  low -> lower",
+          "  high -> upper",
+          "  mid -> middle",
+          "  marks -> points",
+          "  keys -> the_keys",
+          "  key_count -> needle_tally",
+          "  sort_cmp -> arrange_cmp",
+          "  k -> step_no",
+          "  search_cmp -> lookup_cmp",
+          "loop_swap: 4 change(s)",
+          "  line 14: for -> while",
+          "  line 24: for -> while",
+          "  line 75: for -> while",
+          "  line 29: for -> while",
+          "reorder: 4 change(s)",
+          "  inserted 3 prototype(s)",
+          "  function order: bubble_arrange, bin_seek, output_arr, main",
+          "dead_code: 5 change(s)",
+          "  unused variable status_flag in bubble_arrange()",
+          "  unused variable ratio_hint in main()",
+          "  unused variable epsilon in bin_seek()",
+          "  unused variable spare_bits in bubble_arrange()",
+          "  never-called helper clamp_value()",
+          "comments_format: 16 change(s)",
+          "  removed 5 comment(s)",
+          "  added 6 comment(s)",
+          "  brace style allman -> knr",
+          "  blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged"
+        ]
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p07_bracket_checker",
+      "kind": "rename",
+      "source": "generated/python/p07_bracket_checker/original.py",
+      "path": "generated/python/p07_bracket_checker/variant_rename.py",
+      "seed": 700,
+      "report": {
+        "kind": "rename",
+        "changes": 16,
+        "details": [
+          "is_opening -> check_opening",
+          "is_closing -> check_closing",
+          "check_expression -> test_expr",
+          "print_report -> display_report",
+          "PAIRS -> THE_PAIRS",
+          "ch -> symbol",
+          "expr -> formula",
+          "stack -> pile",
+          "i -> pos",
+          "expressions -> local_expressions",
+          "balanced_count -> matched_num",
+          "total -> acc",
+          "status -> tmp_status",
+          "ok -> tmp_ok",
+          "message -> the_message",
+          "top -> head"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 20
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p07_bracket_checker",
+      "kind": "comments_format",
+      "source": "generated/python/p07_bracket_checker/original.py",
+      "path": "generated/python/p07_bracket_checker/variant_comments_format.py",
+      "seed": 710,
+      "report": {
+        "kind": "comments_format",
+        "changes": 19,
+        "details": [
+          "removed about 4 comment(s) and 5 docstring(s)",
+          "added 10 new comment(s)",
+          "re-indented 4 -> 2 spaces",
+          "blank lines between top-level definitions: 0"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 20
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p07_bracket_checker",
+      "kind": "reorder",
+      "source": "generated/python/p07_bracket_checker/original.py",
+      "path": "generated/python/p07_bracket_checker/variant_reorder.py",
+      "seed": 720,
+      "report": {
+        "kind": "reorder",
+        "changes": 5,
+        "details": [
+          "function order: print_report, check_expression, main, is_closing, is_opening"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 20
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p07_bracket_checker",
+      "kind": "loop_swap",
+      "source": "generated/python/p07_bracket_checker/original.py",
+      "path": "generated/python/p07_bracket_checker/variant_loop_swap.py",
+      "seed": 730,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 2,
+        "details": [
+          "line 31: for i in range(...) -> while loop",
+          "line 50: for i in range(...) -> while loop"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 20
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p07_bracket_checker",
+      "kind": "dead_code",
+      "source": "generated/python/p07_bracket_checker/original.py",
+      "path": "generated/python/p07_bracket_checker/variant_dead_code.py",
+      "seed": 740,
+      "report": {
+        "kind": "dead_code",
+        "changes": 6,
+        "details": [
+          "unused variable cache_hits in is_closing()",
+          "unused variable debug_mode in main()",
+          "unused variable temp_buffer in check_expression()",
+          "unused variable scale_factor in is_opening()",
+          "unused variable status_flag in is_opening()",
+          "never-called helper split_into_chunks()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 20
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p07_bracket_checker",
+      "kind": "combined",
+      "source": "generated/python/p07_bracket_checker/original.py",
+      "path": "generated/python/p07_bracket_checker/variant_combined.py",
+      "seed": 750,
+      "report": {
+        "kind": "combined",
+        "changes": 42,
+        "details": [
+          "rename: 16 change(s)",
+          "  is_opening -> has_opening",
+          "  is_closing -> has_closing",
+          "  check_expression -> validate_expr",
+          "  print_report -> show_report",
+          "  PAIRS -> THE_PAIRS",
+          "  ch -> letter",
+          "  expr -> expression",
+          "  stack -> pile",
+          "  i -> pos",
+          "  expressions -> the_expressions",
+          "  balanced_count -> matched_tally",
+          "  total -> acc",
+          "  status -> my_status",
+          "  ok -> the_ok",
+          "  message -> tmp_message",
+          "  top -> head",
+          "loop_swap: 2 change(s)",
+          "  line 26: for pos in range(...) -> while loop",
+          "  line 43: for pos in range(...) -> while loop",
+          "reorder: 4 change(s)",
+          "  function order: has_closing, main, validate_expr, has_opening, show_report",
+          "dead_code: 5 change(s)",
+          "  unused variable spare_items in show_report()",
+          "  unused variable trace_level in has_opening()",
+          "  unused variable temp_buffer in has_opening()",
+          "  unused variable scale_factor in has_closing()",
+          "  never-called helper normalise_values()",
+          "comments_format: 15 change(s)",
+          "  removed about 0 comment(s) and 5 docstring(s)",
+          "  added 10 new comment(s)",
+          "  re-indented 4 -> 2 spaces",
+          "  blank lines between top-level definitions: 2"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 20
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p07_bracket_checker",
+      "kind": "rename",
+      "source": "generated/c/p07_bracket_checker/original.c",
+      "path": "generated/c/p07_bracket_checker/variant_rename.c",
+      "seed": 705,
+      "report": {
+        "kind": "rename",
+        "changes": 17,
+        "details": [
+          "stack -> stk",
+          "top -> peak",
+          "push -> put",
+          "c -> third_val",
+          "pop -> take",
+          "is_matching_pair -> check_matching_pair",
+          "open -> left_sym",
+          "close -> closing",
+          "check_balanced -> verify_ok",
+          "expr -> expression",
+          "i -> idx",
+          "len -> size",
+          "ch -> letter",
+          "expressions -> my_expressions",
+          "count -> amount",
+          "balanced -> matched",
+          "ok -> cur_ok"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "token stream identical up to a one-to-one identifier mapping (struct fields kept)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p07_bracket_checker",
+      "kind": "comments_format",
+      "source": "generated/c/p07_bracket_checker/original.c",
+      "path": "generated/c/p07_bracket_checker/variant_comments_format.c",
+      "seed": 715,
+      "report": {
+        "kind": "comments_format",
+        "changes": 18,
+        "details": [
+          "removed 7 comment(s)",
+          "added 6 comment(s)",
+          "brace style allman -> knr",
+          "blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "code tokens identical (only comments and layout changed)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p07_bracket_checker",
+      "kind": "reorder",
+      "source": "generated/c/p07_bracket_checker/original.c",
+      "path": "generated/c/p07_bracket_checker/variant_reorder.c",
+      "seed": 725,
+      "report": {
+        "kind": "reorder",
+        "changes": 5,
+        "details": [
+          "inserted 4 prototype(s)",
+          "function order: push, main, is_matching_pair, pop, check_balanced"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "function definitions identical, only their order changed (+ prototypes)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p07_bracket_checker",
+      "kind": "loop_swap",
+      "source": "generated/c/p07_bracket_checker/original.c",
+      "path": "generated/c/p07_bracket_checker/variant_loop_swap.c",
+      "seed": 735,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 2,
+        "details": [
+          "line 56: for -> while",
+          "line 88: for -> while"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "identifiers and literals kept; 2 for loop(s) became while loop(s)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p07_bracket_checker",
+      "kind": "dead_code",
+      "source": "generated/c/p07_bracket_checker/original.c",
+      "path": "generated/c/p07_bracket_checker/variant_dead_code.c",
+      "seed": 745,
+      "report": {
+        "kind": "dead_code",
+        "changes": 7,
+        "details": [
+          "unused variable epsilon in pop()",
+          "unused variable retry_limit in push()",
+          "unused variable unused_counter in main()",
+          "unused variable spare_bits in check_balanced()",
+          "unused variable debug_level in main()",
+          "unused variable trace_on in is_matching_pair()",
+          "never-called helper index_of_largest()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "original token stream is a subsequence of the variant (insertions only)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p07_bracket_checker",
+      "kind": "combined",
+      "source": "generated/c/p07_bracket_checker/original.c",
+      "path": "generated/c/p07_bracket_checker/variant_combined.c",
+      "seed": 755,
+      "report": {
+        "kind": "combined",
+        "changes": 50,
+        "details": [
+          "rename: 17 change(s)",
+          "  stack -> pile",
+          "  top -> head",
+          "  push -> put",
+          "  c -> third_val",
+          "  pop -> take",
+          "  is_matching_pair -> has_matching_pair",
+          "  open -> opening",
+          "  close -> closing",
+          "  check_balanced -> test_matched",
+          "  expr -> formula",
+          "  i -> idx",
+          "  len -> size",
+          "  ch -> symbol",
+          "  expressions -> local_expressions",
+          "  count -> num",
+          "  balanced -> matched",
+          "  ok -> my_ok",
+          "loop_swap: 2 change(s)",
+          "  line 56: for -> while",
+          "  line 88: for -> while",
+          "reorder: 5 change(s)",
+          "  inserted 4 prototype(s)",
+          "  function order: main, put, has_matching_pair, test_matched, take",
+          "dead_code: 6 change(s)",
+          "  unused variable ratio_hint in main()",
+          "  unused variable trace_on in has_matching_pair()",
+          "  unused variable scale_factor in has_matching_pair()",
+          "  unused variable debug_level in test_matched()",
+          "  unused variable spare_bits in take()",
+          "  never-called helper index_of_largest()",
+          "comments_format: 20 change(s)",
+          "  removed 7 comment(s)",
+          "  added 7 comment(s)",
+          "  brace style allman -> knr",
+          "  blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged"
+        ]
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p08_base_conversion",
+      "kind": "rename",
+      "source": "generated/python/p08_base_conversion/original.py",
+      "path": "generated/python/p08_base_conversion/variant_rename.py",
+      "seed": 800,
+      "report": {
+        "kind": "rename",
+        "changes": 23,
+        "details": [
+          "to_base -> to_system",
+          "from_base -> from_system",
+          "binary_to_hex -> bin_to_base16",
+          "print_table -> display_table",
+          "DIGITS -> FIGURES",
+          "number -> num",
+          "base -> radix",
+          "remainders -> my_remainders",
+          "text -> sentence",
+          "value -> item",
+          "i -> idx",
+          "bits -> tmp_bits",
+          "padding -> the_padding",
+          "result -> outcome",
+          "start -> first",
+          "numbers -> values",
+          "n -> count_n",
+          "samples -> the_samples",
+          "digit -> figure",
+          "binary -> base2",
+          "octal -> base8",
+          "hexa -> cur_hexa",
+          "back -> local_back"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 22
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p08_base_conversion",
+      "kind": "comments_format",
+      "source": "generated/python/p08_base_conversion/original.py",
+      "path": "generated/python/p08_base_conversion/variant_comments_format.py",
+      "seed": 810,
+      "report": {
+        "kind": "comments_format",
+        "changes": 14,
+        "details": [
+          "removed about 0 comment(s) and 5 docstring(s)",
+          "added 9 new comment(s)",
+          "re-indented 4 -> 2 spaces",
+          "blank lines between top-level definitions: 2"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 22
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p08_base_conversion",
+      "kind": "reorder",
+      "source": "generated/python/p08_base_conversion/original.py",
+      "path": "generated/python/p08_base_conversion/variant_reorder.py",
+      "seed": 820,
+      "report": {
+        "kind": "reorder",
+        "changes": 5,
+        "details": [
+          "function order: from_base, main, to_base, binary_to_hex, print_table"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 22
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p08_base_conversion",
+      "kind": "loop_swap",
+      "source": "generated/python/p08_base_conversion/original.py",
+      "path": "generated/python/p08_base_conversion/variant_loop_swap.py",
+      "seed": 830,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 2,
+        "details": [
+          "line 35: for i in range(...) -> while loop",
+          "line 52: for start in range(...) -> while loop"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 22
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p08_base_conversion",
+      "kind": "dead_code",
+      "source": "generated/python/p08_base_conversion/original.py",
+      "path": "generated/python/p08_base_conversion/variant_dead_code.py",
+      "seed": 840,
+      "report": {
+        "kind": "dead_code",
+        "changes": 6,
+        "details": [
+          "unused variable trace_level in to_base()",
+          "unused variable scale_factor in print_table()",
+          "unused variable max_attempts in to_base()",
+          "unused variable cache_hits in binary_to_hex()",
+          "unused variable status_flag in print_table()",
+          "never-called helper clamp_value()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 22
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p08_base_conversion",
+      "kind": "combined",
+      "source": "generated/python/p08_base_conversion/original.py",
+      "path": "generated/python/p08_base_conversion/variant_combined.py",
+      "seed": 850,
+      "report": {
+        "kind": "combined",
+        "changes": 49,
+        "details": [
+          "rename: 23 change(s)",
+          "  to_base -> to_radix",
+          "  from_base -> from_radix",
+          "  binary_to_hex -> bin_to_base16",
+          "  print_table -> output_table",
+          "  DIGITS -> FIGURES",
+          "  number -> num",
+          "  base -> radix",
+          "  remainders -> local_remainders",
+          "  text -> content",
+          "  value -> item",
+          "  i -> pos",
+          "  bits -> cur_bits",
+          "  padding -> local_padding",
+          "  result -> answer",
+          "  start -> begin",
+          "  numbers -> nums",
+          "  n -> count_n",
+          "  samples -> tmp_samples",
+          "  digit -> numeral",
+          "  binary -> base2",
+          "  octal -> base8",
+          "  hexa -> local_hexa",
+          "  back -> local_back",
+          "loop_swap: 2 change(s)",
+          "  line 32: for pos in range(...) -> while loop",
+          "  line 48: for begin in range(...) -> while loop",
+          "reorder: 3 change(s)",
+          "  function order: to_radix, main, from_radix, output_table, bin_to_base16",
+          "dead_code: 5 change(s)",
+          "  unused variable unused_total in from_radix()",
+          "  unused variable trace_level in to_radix()",
+          "  unused variable status_flag in to_radix()",
+          "  unused variable checkpoint in bin_to_base16()",
+          "  never-called helper clamp_value()",
+          "comments_format: 16 change(s)",
+          "  removed about 0 comment(s) and 5 docstring(s)",
+          "  added 11 new comment(s)",
+          "  re-indented 4 -> 2 spaces",
+          "  blank lines between top-level definitions: 3"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 22
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p08_base_conversion",
+      "kind": "rename",
+      "source": "generated/c/p08_base_conversion/original.c",
+      "path": "generated/c/p08_base_conversion/variant_rename.c",
+      "seed": 805,
+      "report": {
+        "kind": "rename",
+        "changes": 26,
+        "details": [
+          "reverse_string -> invert_str_value",
+          "s -> text_s",
+          "len -> size",
+          "i -> idx",
+          "tmp -> hold",
+          "decimal_to_base -> base10_to_system",
+          "n -> count_n",
+          "base -> radix",
+          "out -> my_out",
+          "digits -> numerals",
+          "pos -> the_pos",
+          "digit_value -> numeral_val",
+          "c -> third_val",
+          "base_to_decimal -> system_to_dec",
+          "text -> sentence",
+          "value -> val",
+          "d -> d_val",
+          "numbers -> values",
+          "count -> tally",
+          "bin -> cur_bin",
+          "oct -> tmp_oct",
+          "hex -> base16",
+          "ok -> tmp_ok",
+          "inputs -> local_inputs",
+          "bases -> tmp_bases",
+          "v -> elem"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "token stream identical up to a one-to-one identifier mapping (struct fields kept)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p08_base_conversion",
+      "kind": "comments_format",
+      "source": "generated/c/p08_base_conversion/original.c",
+      "path": "generated/c/p08_base_conversion/variant_comments_format.c",
+      "seed": 815,
+      "report": {
+        "kind": "comments_format",
+        "changes": 16,
+        "details": [
+          "removed 5 comment(s)",
+          "added 6 comment(s)",
+          "brace style allman -> knr",
+          "blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "code tokens identical (only comments and layout changed)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p08_base_conversion",
+      "kind": "reorder",
+      "source": "generated/c/p08_base_conversion/original.c",
+      "path": "generated/c/p08_base_conversion/variant_reorder.c",
+      "seed": 825,
+      "report": {
+        "kind": "reorder",
+        "changes": 5,
+        "details": [
+          "inserted 4 prototype(s)",
+          "function order: digit_value, base_to_decimal, reverse_string, main, decimal_to_base"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "function definitions identical, only their order changed (+ prototypes)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p08_base_conversion",
+      "kind": "loop_swap",
+      "source": "generated/c/p08_base_conversion/original.c",
+      "path": "generated/c/p08_base_conversion/variant_loop_swap.c",
+      "seed": 835,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 4,
+        "details": [
+          "line 15: for -> while",
+          "line 57: for -> while",
+          "line 73: for -> while",
+          "line 86: for -> while"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "identifiers and literals kept; 4 for loop(s) became while loop(s)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p08_base_conversion",
+      "kind": "dead_code",
+      "source": "generated/c/p08_base_conversion/original.c",
+      "path": "generated/c/p08_base_conversion/variant_dead_code.c",
+      "seed": 845,
+      "report": {
+        "kind": "dead_code",
+        "changes": 4,
+        "details": [
+          "unused variable trace_on in decimal_to_base()",
+          "unused variable checksum in base_to_decimal()",
+          "unused variable retry_limit in digit_value()",
+          "never-called helper clamp_value()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "original token stream is a subsequence of the variant (insertions only)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p08_base_conversion",
+      "kind": "combined",
+      "source": "generated/c/p08_base_conversion/original.c",
+      "path": "generated/c/p08_base_conversion/variant_combined.c",
+      "seed": 855,
+      "report": {
+        "kind": "combined",
+        "changes": 57,
+        "details": [
+          "rename: 26 change(s)",
+          "  reverse_string -> flip_text",
+          "  s -> text_s",
+          "  len -> length",
+          "  i -> idx",
+          "  tmp -> hold",
+          "  decimal_to_base -> dec_to_radix",
+          "  n -> size",
+          "  base -> system",
+          "  out -> local_out",
+          "  digits -> numerals",
+          "  pos -> the_pos",
+          "  digit_value -> numeral_item",
+          "  c -> ch_val",
+          "  base_to_decimal -> radix_to_dec",
+          "  text -> content",
+          "  value -> val",
+          "  d -> divisor",
+          "  numbers -> nums",
+          "  count -> amount",
+          "  bin -> cur_bin",
+          "  oct -> my_oct",
+          "  hex -> base16",
+          "  ok -> cur_ok",
+          "  inputs -> my_inputs",
+          "  bases -> the_bases",
+          "  v -> elem",
+          "loop_swap: 4 change(s)",
+          "  line 15: for -> while",
+          "  line 57: for -> while",
+          "  line 73: for -> while",
+          "  line 86: for -> while",
+          "reorder: 5 change(s)",
+          "  inserted 4 prototype(s)",
+          "  function order: dec_to_radix, flip_text, radix_to_dec, numeral_item, main",
+          "dead_code: 4 change(s)",
+          "  unused variable retry_limit in numeral_item()",
+          "  unused variable debug_level in main()",
+          "  unused variable trace_on in dec_to_radix()",
+          "  never-called helper index_of_largest()",
+          "comments_format: 18 change(s)",
+          "  removed 5 comment(s)",
+          "  added 7 comment(s)",
+          "  brace style allman -> knr",
+          "  blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged"
+        ]
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p09_inventory_billing",
+      "kind": "rename",
+      "source": "generated/python/p09_inventory_billing/original.py",
+      "path": "generated/python/p09_inventory_billing/variant_rename.py",
+      "seed": 900,
+      "report": {
+        "kind": "rename",
+        "changes": 20,
+        "details": [
+          "line_total -> line_grand",
+          "calculate_subtotal -> work_out_partial",
+          "calculate_discount -> compute_rebate",
+          "calculate_gst -> compute_tax",
+          "print_bill -> show_receipt",
+          "GST_RATE -> LEVY_RATIO",
+          "DISCOUNT_LIMIT -> REBATE_BOUND",
+          "DISCOUNT_RATE -> REDUCTION_RATIO",
+          "quantity -> qty",
+          "unit_price -> unit_rate_each",
+          "items -> elements",
+          "subtotal -> partial",
+          "i -> idx",
+          "amount -> sum_value",
+          "discount -> rebate",
+          "taxable -> local_taxable",
+          "gst -> tax",
+          "total -> acc",
+          "name -> title",
+          "price -> cost"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 19
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p09_inventory_billing",
+      "kind": "comments_format",
+      "source": "generated/python/p09_inventory_billing/original.py",
+      "path": "generated/python/p09_inventory_billing/variant_comments_format.py",
+      "seed": 910,
+      "report": {
+        "kind": "comments_format",
+        "changes": 19,
+        "details": [
+          "removed about 3 comment(s) and 6 docstring(s)",
+          "added 10 new comment(s)",
+          "re-indented 4 -> 2 spaces",
+          "blank lines between top-level definitions: 0"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 19
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p09_inventory_billing",
+      "kind": "reorder",
+      "source": "generated/python/p09_inventory_billing/original.py",
+      "path": "generated/python/p09_inventory_billing/variant_reorder.py",
+      "seed": 920,
+      "report": {
+        "kind": "reorder",
+        "changes": 2,
+        "details": [
+          "function order: line_total, calculate_discount, calculate_subtotal, calculate_gst, print_bill, main"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 19
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p09_inventory_billing",
+      "kind": "loop_swap",
+      "source": "generated/python/p09_inventory_billing/original.py",
+      "path": "generated/python/p09_inventory_billing/variant_loop_swap.py",
+      "seed": 930,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 2,
+        "details": [
+          "line 21: for i in range(...) -> while loop",
+          "line 43: for i in range(...) -> while loop"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 19
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p09_inventory_billing",
+      "kind": "dead_code",
+      "source": "generated/python/p09_inventory_billing/original.py",
+      "path": "generated/python/p09_inventory_billing/variant_dead_code.py",
+      "seed": 940,
+      "report": {
+        "kind": "dead_code",
+        "changes": 5,
+        "details": [
+          "unused variable trace_level in main()",
+          "unused variable spare_items in main()",
+          "unused variable max_attempts in calculate_discount()",
+          "unused variable checkpoint in print_bill()",
+          "never-called helper clamp_value()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 19
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p09_inventory_billing",
+      "kind": "combined",
+      "source": "generated/python/p09_inventory_billing/original.py",
+      "path": "generated/python/p09_inventory_billing/variant_combined.py",
+      "seed": 950,
+      "report": {
+        "kind": "combined",
+        "changes": 51,
+        "details": [
+          "rename: 20 change(s)",
+          "  line_total -> line_running_sum",
+          "  calculate_subtotal -> compute_sub_sum",
+          "  calculate_discount -> determine_reduction",
+          "  calculate_gst -> compute_levy",
+          "  print_bill -> output_invoice",
+          "  GST_RATE -> LEVY_PCT",
+          "  DISCOUNT_LIMIT -> REBATE_UPPER",
+          "  DISCOUNT_RATE -> REDUCTION_PCT",
+          "  quantity -> units",
+          "  unit_price -> unit_rate_each",
+          "  items -> elements",
+          "  subtotal -> sub_sum",
+          "  i -> idx",
+          "  amount -> money",
+          "  discount -> rebate",
+          "  taxable -> tmp_taxable",
+          "  gst -> levy",
+          "  total -> running_sum",
+          "  name -> label",
+          "  price -> rate_each",
+          "loop_swap: 2 change(s)",
+          "  line 18: for idx in range(...) -> while loop",
+          "  line 37: for idx in range(...) -> while loop",
+          "reorder: 6 change(s)",
+          "  function order: compute_sub_sum, compute_levy, output_invoice, determine_reduction, main, line_running_sum",
+          "dead_code: 5 change(s)",
+          "  unused variable trace_level in output_invoice()",
+          "  unused variable unused_total in line_running_sum()",
+          "  unused variable spare_items in compute_sub_sum()",
+          "  unused variable debug_mode in main()",
+          "  never-called helper split_into_chunks()",
+          "comments_format: 18 change(s)",
+          "  removed about 0 comment(s) and 6 docstring(s)",
+          "  added 12 new comment(s)",
+          "  re-indented 4 -> 2 spaces",
+          "  blank lines between top-level definitions: 3"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 19
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p09_inventory_billing",
+      "kind": "rename",
+      "source": "generated/c/p09_inventory_billing/original.c",
+      "path": "generated/c/p09_inventory_billing/variant_rename.c",
+      "seed": 905,
+      "report": {
+        "kind": "rename",
+        "changes": 15,
+        "details": [
+          "line_total -> line_acc",
+          "item -> element",
+          "calculate_subtotal -> work_out_partial",
+          "items -> elements",
+          "count -> tally",
+          "subtotal -> partial",
+          "i -> pos",
+          "calculate_discount -> compute_reduction",
+          "calculate_gst -> determine_tax",
+          "amount -> money",
+          "print_bill -> output_receipt",
+          "discount -> reduction",
+          "taxable -> my_taxable",
+          "gst -> levy",
+          "total -> running_sum"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "token stream identical up to a one-to-one identifier mapping (struct fields kept)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p09_inventory_billing",
+      "kind": "comments_format",
+      "source": "generated/c/p09_inventory_billing/original.c",
+      "path": "generated/c/p09_inventory_billing/variant_comments_format.c",
+      "seed": 915,
+      "report": {
+        "kind": "comments_format",
+        "changes": 20,
+        "details": [
+          "removed 7 comment(s)",
+          "added 7 comment(s)",
+          "brace style allman -> knr",
+          "blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "code tokens identical (only comments and layout changed)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p09_inventory_billing",
+      "kind": "reorder",
+      "source": "generated/c/p09_inventory_billing/original.c",
+      "path": "generated/c/p09_inventory_billing/variant_reorder.c",
+      "seed": 925,
+      "report": {
+        "kind": "reorder",
+        "changes": 6,
+        "details": [
+          "inserted 5 prototype(s)",
+          "function order: main, line_total, calculate_discount, calculate_subtotal, print_bill, calculate_gst"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "function definitions identical, only their order changed (+ prototypes)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p09_inventory_billing",
+      "kind": "loop_swap",
+      "source": "generated/c/p09_inventory_billing/original.c",
+      "path": "generated/c/p09_inventory_billing/variant_loop_swap.c",
+      "seed": 935,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 2,
+        "details": [
+          "line 31: for -> while",
+          "line 61: for -> while"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "identifiers and literals kept; 2 for loop(s) became while loop(s)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p09_inventory_billing",
+      "kind": "dead_code",
+      "source": "generated/c/p09_inventory_billing/original.c",
+      "path": "generated/c/p09_inventory_billing/variant_dead_code.c",
+      "seed": 945,
+      "report": {
+        "kind": "dead_code",
+        "changes": 5,
+        "details": [
+          "unused variable unused_counter in line_total()",
+          "unused variable epsilon in calculate_gst()",
+          "unused variable spare_bits in main()",
+          "unused variable checksum in calculate_discount()",
+          "never-called helper index_of_largest()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "original token stream is a subsequence of the variant (insertions only)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p09_inventory_billing",
+      "kind": "combined",
+      "source": "generated/c/p09_inventory_billing/original.c",
+      "path": "generated/c/p09_inventory_billing/variant_combined.c",
+      "seed": 955,
+      "report": {
+        "kind": "combined",
+        "changes": 50,
+        "details": [
+          "rename: 15 change(s)",
+          "  line_total -> line_grand",
+          "  item -> element",
+          "  calculate_subtotal -> work_out_sub_sum",
+          "  items -> entries",
+          "  count -> num",
+          "  subtotal -> partial",
+          "  i -> idx",
+          "  calculate_discount -> determine_rebate",
+          "  calculate_gst -> compute_levy",
+          "  amount -> money",
+          "  print_bill -> show_invoice",
+          "  discount -> rebate",
+          "  taxable -> tmp_taxable",
+          "  gst -> levy",
+          "  total -> acc",
+          "loop_swap: 2 change(s)",
+          "  line 31: for -> while",
+          "  line 61: for -> while",
+          "reorder: 6 change(s)",
+          "  inserted 5 prototype(s)",
+          "  function order: compute_levy, show_invoice, work_out_sub_sum, line_grand, main, determine_rebate",
+          "dead_code: 5 change(s)",
+          "  unused variable spare_bits in work_out_sub_sum()",
+          "  unused variable unused_counter in show_invoice()",
+          "  unused variable ratio_hint in work_out_sub_sum()",
+          "  unused variable status_flag in work_out_sub_sum()",
+          "  never-called helper index_of_largest()",
+          "comments_format: 22 change(s)",
+          "  removed 7 comment(s)",
+          "  added 8 comment(s)",
+          "  brace style allman -> knr",
+          "  blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged"
+        ]
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p10_temperature_series",
+      "kind": "rename",
+      "source": "generated/python/p10_temperature_series/original.py",
+      "path": "generated/python/p10_temperature_series/variant_rename.py",
+      "seed": 1000,
+      "report": {
+        "kind": "rename",
+        "changes": 28,
+        "details": [
+          "moving_average -> sliding_avg",
+          "find_min_max -> get_smallest_highest",
+          "longest_rising_streak -> longest_increasing_run",
+          "print_report -> show_report",
+          "READINGS -> MEASUREMENTS",
+          "WINDOW -> SPAN",
+          "values -> items",
+          "window -> span",
+          "averages -> the_averages",
+          "min_index -> lowest_pos",
+          "max_index -> highest_position",
+          "i -> pos",
+          "total -> acc",
+          "offset -> cur_offset",
+          "best_length -> leader_size",
+          "best_start -> top_begin",
+          "current_length -> now_size",
+          "current_start -> cur_begin",
+          "day -> day_no",
+          "value -> item",
+          "average -> mean_value",
+          "low -> lo",
+          "low_day -> lo_day_no",
+          "high -> upper",
+          "high_day -> hi_date_idx",
+          "length -> size",
+          "first -> initial",
+          "last -> final"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 29
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p10_temperature_series",
+      "kind": "comments_format",
+      "source": "generated/python/p10_temperature_series/original.py",
+      "path": "generated/python/p10_temperature_series/variant_comments_format.py",
+      "seed": 1010,
+      "report": {
+        "kind": "comments_format",
+        "changes": 17,
+        "details": [
+          "removed about 0 comment(s) and 5 docstring(s)",
+          "added 12 new comment(s)",
+          "re-indented 4 -> 2 spaces",
+          "blank lines between top-level definitions: 2"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 29
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p10_temperature_series",
+      "kind": "reorder",
+      "source": "generated/python/p10_temperature_series/original.py",
+      "path": "generated/python/p10_temperature_series/variant_reorder.py",
+      "seed": 1020,
+      "report": {
+        "kind": "reorder",
+        "changes": 4,
+        "details": [
+          "function order: print_report, main, longest_rising_streak, moving_average, find_min_max"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 29
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p10_temperature_series",
+      "kind": "loop_swap",
+      "source": "generated/python/p10_temperature_series/original.py",
+      "path": "generated/python/p10_temperature_series/variant_loop_swap.py",
+      "seed": 1030,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 4,
+        "details": [
+          "line 18: for offset in range(...) -> while loop",
+          "line 16: for start in range(...) -> while loop",
+          "line 28: for i in range(...) -> while loop",
+          "line 44: for i in range(...) -> while loop"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 29
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p10_temperature_series",
+      "kind": "dead_code",
+      "source": "generated/python/p10_temperature_series/original.py",
+      "path": "generated/python/p10_temperature_series/variant_dead_code.py",
+      "seed": 1040,
+      "report": {
+        "kind": "dead_code",
+        "changes": 7,
+        "details": [
+          "unused variable unused_total in find_min_max()",
+          "unused variable log_prefix in print_report()",
+          "unused variable status_flag in main()",
+          "unused variable max_attempts in moving_average()",
+          "unused variable retry_limit in print_report()",
+          "unused variable scale_factor in print_report()",
+          "never-called helper normalise_values()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 29
+      }
+    },
+    {
+      "language": "python",
+      "problem": "p10_temperature_series",
+      "kind": "combined",
+      "source": "generated/python/p10_temperature_series/original.py",
+      "path": "generated/python/p10_temperature_series/variant_combined.py",
+      "seed": 1050,
+      "report": {
+        "kind": "combined",
+        "changes": 59,
+        "details": [
+          "rename: 28 change(s)",
+          "  moving_average -> sliding_avg",
+          "  find_min_max -> get_smallest_highest",
+          "  longest_rising_streak -> longest_climbing_sequence",
+          "  print_report -> show_report",
+          "  READINGS -> MEASUREMENTS",
+          "  WINDOW -> FRAME",
+          "  values -> items",
+          "  window -> frame",
+          "  averages -> tmp_averages",
+          "  min_index -> smallest_pos",
+          "  max_index -> highest_position",
+          "  i -> idx",
+          "  total -> running_sum",
+          "  offset -> my_offset",
+          "  best_length -> leader_size",
+          "  best_start -> top_first",
+          "  current_length -> now_size",
+          "  current_start -> cur_begin",
+          "  day -> day_no",
+          "  value -> item",
+          "  average -> mean_value",
+          "  low -> lower",
+          "  low_day -> lo_day_no",
+          "  high -> upper",
+          "  high_day -> upper_day_no",
+          "  length -> len_value",
+          "  first -> initial",
+          "  last -> final",
+          "loop_swap: 4 change(s)",
+          "  line 16: for my_offset in range(...) -> while loop",
+          "  line 14: for start in range(...) -> while loop",
+          "  line 25: for idx in range(...) -> while loop",
+          "  line 40: for idx in range(...) -> while loop",
+          "reorder: 5 change(s)",
+          "  function order: main, show_report, sliding_avg, get_smallest_highest, longest_climbing_sequence",
+          "dead_code: 4 change(s)",
+          "  unused variable checkpoint in main()",
+          "  unused variable log_prefix in sliding_avg()",
+          "  unused variable spare_items in get_smallest_highest()",
+          "  never-called helper split_into_chunks()",
+          "comments_format: 18 change(s)",
+          "  removed about 0 comment(s) and 5 docstring(s)",
+          "  added 13 new comment(s)",
+          "  re-indented 4 -> 2 spaces",
+          "  blank lines between top-level definitions: 0"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "run_equivalent": true,
+        "stdout_lines": 29
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p10_temperature_series",
+      "kind": "rename",
+      "source": "generated/c/p10_temperature_series/original.c",
+      "path": "generated/c/p10_temperature_series/variant_rename.c",
+      "seed": 1005,
+      "report": {
+        "kind": "rename",
+        "changes": 21,
+        "details": [
+          "moving_average -> sliding_mean_value",
+          "values -> items",
+          "count -> num",
+          "window -> span",
+          "averages -> local_averages",
+          "windows -> local_windows",
+          "start -> begin",
+          "offset -> cur_offset",
+          "total -> running_sum",
+          "find_min_max -> search_lowest_highest",
+          "min_index -> smallest_position",
+          "max_index -> highest_pos",
+          "i -> pos",
+          "longest_rising_streak -> longest_climbing_sequence",
+          "best_length -> leader_len_value",
+          "current_length -> now_len_value",
+          "current_start -> cur_first",
+          "print_readings -> display_measurements",
+          "readings -> samples",
+          "streak -> sequence",
+          "streak_start -> run_begin"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "token stream identical up to a one-to-one identifier mapping (struct fields kept)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p10_temperature_series",
+      "kind": "comments_format",
+      "source": "generated/c/p10_temperature_series/original.c",
+      "path": "generated/c/p10_temperature_series/variant_comments_format.c",
+      "seed": 1015,
+      "report": {
+        "kind": "comments_format",
+        "changes": 16,
+        "details": [
+          "removed 5 comment(s)",
+          "added 6 comment(s)",
+          "brace style allman -> knr",
+          "blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "code tokens identical (only comments and layout changed)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p10_temperature_series",
+      "kind": "reorder",
+      "source": "generated/c/p10_temperature_series/original.c",
+      "path": "generated/c/p10_temperature_series/variant_reorder.c",
+      "seed": 1025,
+      "report": {
+        "kind": "reorder",
+        "changes": 5,
+        "details": [
+          "inserted 4 prototype(s)",
+          "function order: main, longest_rising_streak, find_min_max, print_readings, moving_average"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "function definitions identical, only their order changed (+ prototypes)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p10_temperature_series",
+      "kind": "loop_swap",
+      "source": "generated/c/p10_temperature_series/original.c",
+      "path": "generated/c/p10_temperature_series/variant_loop_swap.c",
+      "seed": 1035,
+      "report": {
+        "kind": "loop_swap",
+        "changes": 6,
+        "details": [
+          "line 19: for -> while",
+          "line 36: for -> while",
+          "line 53: for -> while",
+          "line 74: for -> while",
+          "line 90: for -> while",
+          "line 22: for -> while"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "identifiers and literals kept; 6 for loop(s) became while loop(s)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p10_temperature_series",
+      "kind": "dead_code",
+      "source": "generated/c/p10_temperature_series/original.c",
+      "path": "generated/c/p10_temperature_series/variant_dead_code.c",
+      "seed": 1045,
+      "report": {
+        "kind": "dead_code",
+        "changes": 5,
+        "details": [
+          "unused variable scale_factor in main()",
+          "unused variable unused_counter in moving_average()",
+          "unused variable trace_on in find_min_max()",
+          "unused variable retry_limit in find_min_max()",
+          "never-called helper clamp_value()"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged",
+          "original token stream is a subsequence of the variant (insertions only)"
+        ]
+      }
+    },
+    {
+      "language": "c",
+      "problem": "p10_temperature_series",
+      "kind": "combined",
+      "source": "generated/c/p10_temperature_series/original.c",
+      "path": "generated/c/p10_temperature_series/variant_combined.c",
+      "seed": 1055,
+      "report": {
+        "kind": "combined",
+        "changes": 57,
+        "details": [
+          "rename: 21 change(s)",
+          "  moving_average -> rolling_avg",
+          "  values -> vals",
+          "  count -> tally",
+          "  window -> span",
+          "  averages -> the_averages",
+          "  windows -> tmp_windows",
+          "  start -> begin",
+          "  offset -> my_offset",
+          "  total -> grand",
+          "  find_min_max -> get_smallest_highest",
+          "  min_index -> smallest_position",
+          "  max_index -> highest_pos",
+          "  i -> idx",
+          "  longest_rising_streak -> longest_climbing_sequence",
+          "  best_length -> top_len_value",
+          "  current_length -> cur_len_value",
+          "  current_start -> now_first",
+          "  print_readings -> show_measurements",
+          "  readings -> measurements",
+          "  streak -> run",
+          "  streak_start -> run_begin",
+          "loop_swap: 6 change(s)",
+          "  line 19: for -> while",
+          "  line 36: for -> while",
+          "  line 53: for -> while",
+          "  line 74: for -> while",
+          "  line 90: for -> while",
+          "  line 22: for -> while",
+          "reorder: 5 change(s)",
+          "  inserted 4 prototype(s)",
+          "  function order: rolling_avg, get_smallest_highest, longest_climbing_sequence, main, show_measurements",
+          "dead_code: 7 change(s)",
+          "  unused variable unused_counter in longest_climbing_sequence()",
+          "  unused variable retry_limit in get_smallest_highest()",
+          "  unused variable ratio_hint in get_smallest_highest()",
+          "  unused variable status_flag in get_smallest_highest()",
+          "  unused variable scale_factor in longest_climbing_sequence()",
+          "  unused variable debug_level in get_smallest_highest()",
+          "  never-called helper clamp_value()",
+          "comments_format: 18 change(s)",
+          "  removed 5 comment(s)",
+          "  added 7 comment(s)",
+          "  brace style allman -> knr",
+          "  blank-line layout changed"
+        ]
+      },
+      "checks": {
+        "syntax": "ok",
+        "invariants": [
+          "string literals unchanged"
+        ]
+      }
+    }
+  ],
+  "skipped": [],
+  "demo_batch": [
+    {
+      "file": "student_01.py",
+      "source": "honest_01.py",
+      "transforms": [],
+      "steps": []
+    },
+    {
+      "file": "student_02.py",
+      "source": "honest_02.py",
+      "transforms": [],
+      "steps": []
+    },
+    {
+      "file": "student_03.py",
+      "source": "honest_03.py",
+      "transforms": [],
+      "steps": []
+    },
+    {
+      "file": "student_04.py",
+      "source": "honest_04.py",
+      "transforms": [],
+      "steps": []
+    },
+    {
+      "file": "student_05.py",
+      "source": "honest_05.py",
+      "transforms": [],
+      "steps": []
+    },
+    {
+      "file": "student_06.py",
+      "source": "honest_06.py",
+      "transforms": [],
+      "steps": []
+    },
+    {
+      "file": "student_07.py",
+      "source": "honest_07.py",
+      "transforms": [],
+      "steps": []
+    },
+    {
+      "file": "student_08.py",
+      "source": "honest_02.py",
+      "transforms": [
+        "rename"
+      ],
+      "steps": [
+        {
+          "kind": "rename",
+          "seed": 7070,
+          "report": {
+            "kind": "rename",
+            "changes": 25,
+            "details": [
+              "letter_for -> my_letter_for",
+              "mean_of -> average_of",
+              "median_of -> mid_val_of",
+              "std_dev_of -> spread_deviation_of",
+              "grade_distribution -> level_distribution",
+              "print_table -> display_table",
+              "CLASS_LIST -> CLASS_SEQ",
+              "GRADE_CUTOFFS -> LEVEL_CUTOFFS",
+              "score -> points",
+              "scores -> marks",
+              "ordered -> local_ordered",
+              "mid -> middle",
+              "avg -> average",
+              "variance -> cur_variance",
+              "records -> tmp_records",
+              "tally -> cur_tally",
+              "record -> tmp_record",
+              "i -> pos",
+              "topper -> my_topper",
+              "cutoff -> the_cutoff",
+              "letter -> local_letter",
+              "roll -> cur_roll",
+              "name -> label",
+              "s -> line_s",
+              "g -> the_g"
+            ]
+          },
+          "checks": {
+            "syntax": "ok",
+            "run_equivalent": true,
+            "stdout_lines": 19
+          }
+        }
+      ]
+    },
+    {
+      "file": "student_09.py",
+      "source": "honest_05.py",
+      "transforms": [
+        "combined"
+      ],
+      "steps": [
+        {
+          "kind": "combined",
+          "seed": 7080,
+          "report": {
+            "kind": "combined",
+            "changes": 69,
+            "details": [
+              "rename: 34 change(s)",
+              "  parse_sheet -> cur_parse_sheet",
+              "  letter -> the_letter",
+              "  average -> mean_value",
+              "  spread -> my_spread",
+              "  median_by_counting -> middle_value_by_counting",
+              "  print_histogram -> output_histogram",
+              "  topper_index -> topper_position",
+              "  MARKS_SHEET -> SCORES_SHEET",
+              "  CUTOFFS -> MY_CUTOFFS",
+              "  LETTERS -> THE_LETTERS",
+              "  text -> sentence",
+              "  rows -> height",
+              "  line -> the_line",
+              "  mark -> point",
+              "  marks -> results",
+              "  mean -> my_mean",
+              "  squared -> my_squared",
+              "  i -> idx",
+              "  freq -> frequency",
+              "  m -> width",
+              "  n -> count_n",
+              "  wanted -> cur_wanted",
+              "  found -> hit",
+              "  seen -> the_seen",
+              "  value -> item",
+              "  counts -> tallies",
+              "  row -> r_idx",
+              "  g -> tmp_g",
+              "  best -> leader",
+              "  avg -> mean_val",
+              "  top -> peak",
+              "  stars -> cur_stars",
+              "  roll -> the_roll",
+              "  name -> title",
+              "loop_swap: 3 change(s)",
+              "  line 27: for idx in range(...) -> while loop",
+              "  line 39: for item in range(...) -> while loop",
+              "  line 57: for idx in range(...) -> while loop",
+              "reorder: 7 change(s)",
+              "  function order: middle_value_by_counting, my_spread, the_letter, main, topper_position, output_histogram, cur_parse_sheet, mean_value",
+              "dead_code: 7 change(s)",
+              "  unused variable temp_buffer in topper_position()",
+              "  unused variable trace_level in output_histogram()",
+              "  unused variable checkpoint in mean_value()",
+              "  unused variable spare_items in middle_value_by_counting()",
+              "  unused variable debug_mode in middle_value_by_counting()",
+              "  unused variable retry_limit in the_letter()",
+              "  never-called helper split_into_chunks()",
+              "comments_format: 18 change(s)",
+              "  removed about 0 comment(s) and 1 docstring(s)",
+              "  added 17 new comment(s)",
+              "  re-indented 4 -> 2 spaces",
+              "  blank lines between top-level definitions: 2"
+            ]
+          },
+          "checks": {
+            "syntax": "ok",
+            "run_equivalent": true,
+            "stdout_lines": 12
+          }
+        }
+      ]
+    },
+    {
+      "file": "student_10.py",
+      "source": "student_09.py",
+      "transforms": [
+        "comments_format"
+      ],
+      "steps": [
+        {
+          "kind": "comments_format",
+          "seed": 7090,
+          "report": {
+            "kind": "comments_format",
+            "changes": 51,
+            "details": [
+              "removed about 33 comment(s) and 0 docstring(s)",
+              "added 18 new comment(s)",
+              "re-indented 4 -> 2 spaces",
+              "blank lines between top-level definitions: 2"
+            ]
+          },
+          "checks": {
+            "syntax": "ok",
+            "run_equivalent": true,
+            "stdout_lines": 12
+          }
+        }
+      ]
+    },
+    {
+      "file": "student_11.py",
+      "source": "honest_07.py",
+      "transforms": [
+        "reorder",
+        "dead_code"
+      ],
+      "steps": [
+        {
+          "kind": "reorder",
+          "seed": 7100,
+          "report": {
+            "kind": "reorder",
+            "changes": 6,
+            "details": [
+              "function order: tally_grades, grade_letter, merge_sort, deviation, main, class_average, middle_mark"
+            ]
+          },
+          "checks": {
+            "syntax": "ok",
+            "run_equivalent": true,
+            "stdout_lines": 11
+          }
+        },
+        {
+          "kind": "dead_code",
+          "seed": 7101,
+          "report": {
+            "kind": "dead_code",
+            "changes": 6,
+            "details": [
+              "unused variable checkpoint in tally_grades()",
+              "unused variable log_prefix in grade_letter()",
+              "unused variable cache_hits in merge_sort()",
+              "unused variable scale_factor in tally_grades()",
+              "unused variable unused_total in merge_sort()",
+              "never-called helper split_into_chunks()"
+            ]
+          },
+          "checks": {
+            "syntax": "ok",
+            "run_equivalent": true,
+            "stdout_lines": 11
+          }
+        }
+      ]
+    },
+    {
+      "file": "student_12.c",
+      "source": "honest_c_01.c",
+      "transforms": [],
+      "steps": []
+    },
+    {
+      "file": "student_13.c",
+      "source": "honest_c_01.c",
+      "transforms": [
+        "loop_swap"
+      ],
+      "steps": [
+        {
+          "kind": "loop_swap",
+          "seed": 7120,
+          "report": {
+            "kind": "loop_swap",
+            "changes": 5,
+            "details": [
+              "line 22: for -> while",
+              "line 33: for -> while",
+              "line 51: for -> while",
+              "line 91: for -> while",
+              "line 104: for -> while"
+            ]
+          },
+          "checks": {
+            "syntax": "ok",
+            "invariants": [
+              "string literals unchanged",
+              "identifiers and literals kept; 5 for loop(s) became while loop(s)"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "variants_written": 120,
+    "variants_skipped": 0,
+    "label_pairs": 290,
+    "positives": 120,
+    "negatives": 170,
+    "by_category": {
+      "combined": 20,
+      "comments_format": 20,
+      "dead_code": 20,
+      "different_problem": 90,
+      "independent_same_problem": 60,
+      "loop_swap": 20,
+      "obfuscated_vs_independent": 20,
+      "rename": 20,
+      "reorder": 20
+    }
+  }
+}

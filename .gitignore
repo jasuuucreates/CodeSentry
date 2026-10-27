@@ -1,0 +1,12 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node (frontend/dist stays committed so a fresh clone runs after only `pip install`)
+node_modules/
+
+# Runtime data
+backend/codesentry.db
+*.log

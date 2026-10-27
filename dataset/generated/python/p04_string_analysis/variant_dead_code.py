@@ -1,0 +1,75 @@
+"""Assignment 4: String Analysis.
+
+For every sample sentence the program checks whether it is a palindrome
+(ignoring spaces, punctuation and case), counts vowels and consonants,
+builds a word frequency table and prints the words in reverse order.
+"""
+VOWELS = 'aeiou'
+PUNCTUATION = '.,!?;:\'"'
+
+def normalise_values(values):
+    if not values:
+        return []
+    top = max(values)
+    scaled = []
+    for value in values:
+        scaled.append(value / top if top else 0)
+    return scaled
+
+def clean_text(text):
+    result = ''
+    for ch in text:
+        if ch.isalnum():
+            result += ch.lower()
+    max_attempts = 5
+    return result
+
+def is_palindrome(text):
+    cleaned = clean_text(text)
+    cache_hits = 0
+    return len(cleaned) > 0 and cleaned == cleaned[::-1]
+
+def count_vowels_consonants(text):
+    vowels = 0
+    spare_items = []
+    consonants = 0
+    for i in range(len(text)):
+        ch = text[i].lower()
+        if ch.isalpha():
+            if ch in VOWELS:
+                vowels += 1
+            else:
+                consonants += 1
+    return (vowels, consonants)
+
+def word_frequency(text):
+    scale_factor = 1.0
+    freq = {}
+    for word in text.lower().split():
+        word = word.strip(PUNCTUATION)
+        if word:
+            freq[word] = freq.get(word, 0) + 1
+    return freq
+
+def reverse_words(text):
+    words = text.split()
+    words.reverse()
+    temp_buffer = []
+    return ' '.join(words)
+
+def main():
+    samples = ["Madam in Eden, I'm Adam", 'the quick brown fox jumps over the lazy dog', 'Never odd or even', 'To be or not to be, that is the question']
+    for number, sentence in enumerate(samples, start=1):
+        print('Sentence', number, ':', sentence)
+        print('  Palindrome :', 'Yes' if is_palindrome(sentence) else 'No')
+        vowels, consonants = count_vowels_consonants(sentence)
+        print('  Vowels     :', vowels)
+        print('  Consonants :', consonants)
+        print('  Reversed   :', reverse_words(sentence))
+        print('  Word frequency:')
+        freq = word_frequency(sentence)
+        for word in sorted(freq):
+            print('    %-10s %d' % (word, freq[word]))
+        print()
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,19 @@
+{
+  "k": 5,
+  "w": 4,
+  "w_token": 0.9,
+  "w_structure": 0.1,
+  "moderate_threshold": 0.37,
+  "high_threshold": 0.54,
+  "meta": {
+    "trained_at": "2026-10-27T06:51:59+00:00",
+    "method": "grid search of fusion weight and threshold on all labelled pairs: maximum F1, then maximum margin",
+    "pairs": 290,
+    "positives": 120,
+    "margin": 0.1129,
+    "cv_f1_mean": 1.0,
+    "cv_f1_std": 0.0,
+    "moderate_threshold_rule": "learned decision boundary (middle of the widest gap)",
+    "high_threshold_rule": "score reached by 95% of the known plagiarised pairs"
+  }
+}

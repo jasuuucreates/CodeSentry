@@ -1,0 +1,238 @@
+{
+  "generated_at": "2026-10-27T06:51:59+00:00",
+  "pairs": 290,
+  "positives": 120,
+  "negatives": 170,
+  "features": [
+    "token",
+    "containment",
+    "structure",
+    "ted",
+    "subtree",
+    "text",
+    "tfidf",
+    "length_ratio"
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "test_problems": [
+        "p01_grade_statistics",
+        "p02_matrix_operations"
+      ],
+      "train_pairs": 216,
+      "test_pairs": 74,
+      "learned_w_token": 0.7,
+      "learned_threshold": 0.42,
+      "calibrated_f1": 1.0,
+      "logreg_f1": 1.0
+    },
+    {
+      "fold": 2,
+      "test_problems": [
+        "p03_prime_numbers",
+        "p04_string_analysis"
+      ],
+      "train_pairs": 216,
+      "test_pairs": 66,
+      "learned_w_token": 0.9,
+      "learned_threshold": 0.37,
+      "calibrated_f1": 1.0,
+      "logreg_f1": 1.0
+    },
+    {
+      "fold": 3,
+      "test_problems": [
+        "p05_bank_account",
+        "p06_sort_and_search"
+      ],
+      "train_pairs": 216,
+      "test_pairs": 58,
+      "learned_w_token": 0.85,
+      "learned_threshold": 0.38,
+      "calibrated_f1": 1.0,
+      "logreg_f1": 1.0
+    },
+    {
+      "fold": 4,
+      "test_problems": [
+        "p07_bracket_checker",
+        "p08_base_conversion"
+      ],
+      "train_pairs": 216,
+      "test_pairs": 50,
+      "learned_w_token": 0.9,
+      "learned_threshold": 0.37,
+      "calibrated_f1": 1.0,
+      "logreg_f1": 1.0
+    },
+    {
+      "fold": 5,
+      "test_problems": [
+        "p09_inventory_billing",
+        "p10_temperature_series"
+      ],
+      "train_pairs": 216,
+      "test_pairs": 42,
+      "learned_w_token": 0.95,
+      "learned_threshold": 0.36,
+      "calibrated_f1": 1.0,
+      "logreg_f1": 1.0
+    }
+  ],
+  "comparison_on_held_out_pairs": {
+    "text": {
+      "label": "Plain text",
+      "tp": 69,
+      "fp": 0,
+      "tn": 170,
+      "fn": 51,
+      "precision": 1.0,
+      "recall": 0.575,
+      "f1": 0.7302,
+      "accuracy": 0.8241,
+      "auc": 0.8045
+    },
+    "tfidf": {
+      "label": "TF-IDF cosine",
+      "tp": 107,
+      "fp": 120,
+      "tn": 50,
+      "fn": 13,
+      "precision": 0.4714,
+      "recall": 0.8917,
+      "f1": 0.6167,
+      "accuracy": 0.5414,
+      "auc": 0.8427
+    },
+    "token": {
+      "label": "Token winnowing",
+      "tp": 116,
+      "fp": 0,
+      "tn": 170,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.9667,
+      "f1": 0.9831,
+      "accuracy": 0.9862,
+      "auc": 1.0
+    },
+    "structure": {
+      "label": "AST structure",
+      "tp": 120,
+      "fp": 1,
+      "tn": 169,
+      "fn": 0,
+      "precision": 0.9917,
+      "recall": 1.0,
+      "f1": 0.9959,
+      "accuracy": 0.9966,
+      "auc": 1.0
+    },
+    "hybrid": {
+      "label": "Hybrid (default weights)",
+      "tp": 120,
+      "fp": 0,
+      "tn": 170,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "auc": 1.0
+    },
+    "hybrid_calibrated": {
+      "label": "Calibrated hybrid (trained, CV)",
+      "tp": 120,
+      "fp": 0,
+      "tn": 170,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "auc": 1.0
+    },
+    "logreg": {
+      "label": "Logistic regression (trained, CV)",
+      "tp": 120,
+      "fp": 0,
+      "tn": 170,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "auc": 1.0
+    }
+  },
+  "trained_config": {
+    "k": 5,
+    "w": 4,
+    "w_token": 0.9,
+    "w_structure": 0.1,
+    "moderate_threshold": 0.37,
+    "high_threshold": 0.54,
+    "meta": {
+      "trained_at": "2026-10-27T06:51:59+00:00",
+      "method": "grid search of fusion weight and threshold on all labelled pairs: maximum F1, then maximum margin",
+      "pairs": 290,
+      "positives": 120,
+      "margin": 0.1129,
+      "cv_f1_mean": 1.0,
+      "cv_f1_std": 0.0,
+      "moderate_threshold_rule": "learned decision boundary (middle of the widest gap)",
+      "high_threshold_rule": "score reached by 95% of the known plagiarised pairs"
+    }
+  },
+  "logistic_regression": {
+    "features": [
+      "token",
+      "containment",
+      "structure",
+      "ted",
+      "subtree",
+      "text",
+      "tfidf",
+      "length_ratio"
+    ],
+    "means": [
+      0.41410172413793106,
+      0.5352103448275862,
+      0.5854324137931034,
+      0.5338293103448275,
+      0.6370386206896551,
+      0.346184218121589,
+      0.6517141379310345,
+      0.8740107891976397
+    ],
+    "stds": [
+      0.3419192241226187,
+      0.32164970777800217,
+      0.2504737242417913,
+      0.26386233872244086,
+      0.2523690605350404,
+      0.23141261441309002,
+      0.19031641812259775,
+      0.10964877196718893
+    ],
+    "weights": [
+      1.1285811926793212,
+      1.3972889110123519,
+      0.8846468001696075,
+      0.47565078946177736,
+      1.2586301418327803,
+      0.225472231024988,
+      0.058299091342422366,
+      -0.01259587605984367
+    ],
+    "bias": 0.02390004621332533,
+    "threshold": 0.5,
+    "meta": {
+      "trained_at": "2026-10-27T06:51:59+00:00",
+      "pairs": 290,
+      "cv_f1_mean": 1.0,
+      "cv_f1_std": 0.0
+    }
+  }
+}

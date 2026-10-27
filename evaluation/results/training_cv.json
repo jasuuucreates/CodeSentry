@@ -1,0 +1,113 @@
+{
+  "generated_at": "2026-10-27T06:51:59+00:00",
+  "methods": {
+    "hybrid_calibrated": {
+      "label": "Calibrated hybrid (trained, 5-fold grouped CV)",
+      "at_default": {
+        "threshold": 0.38,
+        "tp": 120,
+        "fp": 0,
+        "tn": 170,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0
+      },
+      "best": {
+        "threshold": 0.38,
+        "tp": 120,
+        "fp": 0,
+        "tn": 170,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0
+      },
+      "auc": 1.0,
+      "mean_ms": 8.771,
+      "recall_by_category": {
+        "combined": 1.0,
+        "comments_format": 1.0,
+        "dead_code": 1.0,
+        "loop_swap": 1.0,
+        "rename": 1.0,
+        "reorder": 1.0
+      },
+      "fpr_by_category": {
+        "different_problem": 0.0,
+        "independent_same_problem": 0.0,
+        "obfuscated_vs_independent": 0.0
+      },
+      "cv": {
+        "folds": 5,
+        "f1_per_fold": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "f1_mean": 1.0,
+        "f1_std": 0.0
+      }
+    },
+    "logreg": {
+      "label": "Logistic regression (trained, 5-fold grouped CV)",
+      "at_default": {
+        "threshold": 0.5,
+        "tp": 120,
+        "fp": 0,
+        "tn": 170,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0
+      },
+      "best": {
+        "threshold": 0.5,
+        "tp": 120,
+        "fp": 0,
+        "tn": 170,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0
+      },
+      "auc": 1.0,
+      "mean_ms": 8.771,
+      "recall_by_category": {
+        "combined": 1.0,
+        "comments_format": 1.0,
+        "dead_code": 1.0,
+        "loop_swap": 1.0,
+        "rename": 1.0,
+        "reorder": 1.0
+      },
+      "fpr_by_category": {
+        "different_problem": 0.0,
+        "independent_same_problem": 0.0,
+        "obfuscated_vs_independent": 0.0
+      },
+      "cv": {
+        "folds": 5,
+        "f1_per_fold": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "f1_mean": 1.0,
+        "f1_std": 0.0
+      }
+    }
+  },
+  "method_order": [
+    "hybrid_calibrated",
+    "logreg"
+  ]
+}

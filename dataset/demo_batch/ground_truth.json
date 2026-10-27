@@ -1,0 +1,120 @@
+{
+  "assignment": "Assignment 3 - Student Grade Statistics",
+  "files": [
+    {
+      "file": "student_01.py",
+      "origin": "honest_01.py",
+      "honest": true
+    },
+    {
+      "file": "student_02.py",
+      "origin": "honest_02.py",
+      "honest": true
+    },
+    {
+      "file": "student_03.py",
+      "origin": "honest_03.py",
+      "honest": true
+    },
+    {
+      "file": "student_04.py",
+      "origin": "honest_04.py",
+      "honest": true
+    },
+    {
+      "file": "student_05.py",
+      "origin": "honest_05.py",
+      "honest": true
+    },
+    {
+      "file": "student_06.py",
+      "origin": "honest_06.py",
+      "honest": true
+    },
+    {
+      "file": "student_07.py",
+      "origin": "honest_07.py",
+      "honest": true
+    },
+    {
+      "file": "student_08.py",
+      "origin": "rename of honest_02.py",
+      "honest": false
+    },
+    {
+      "file": "student_09.py",
+      "origin": "combined of honest_05.py",
+      "honest": false
+    },
+    {
+      "file": "student_10.py",
+      "origin": "comments_format of student_09.py",
+      "honest": false
+    },
+    {
+      "file": "student_11.py",
+      "origin": "reorder -> dead_code of honest_07.py",
+      "honest": false
+    },
+    {
+      "file": "student_12.c",
+      "origin": "honest_c_01.c",
+      "honest": true
+    },
+    {
+      "file": "student_13.c",
+      "origin": "loop_swap of honest_c_01.c",
+      "honest": false
+    }
+  ],
+  "planted_pairs": [
+    {
+      "a": "student_02.py",
+      "b": "student_08.py",
+      "relation": "student_08 = rename(student_02)",
+      "expected": "copied"
+    },
+    {
+      "a": "student_05.py",
+      "b": "student_09.py",
+      "relation": "student_09 = combined(student_05): rename, loop swap, reorder, dead code, comments/format",
+      "expected": "copied"
+    },
+    {
+      "a": "student_09.py",
+      "b": "student_10.py",
+      "relation": "student_10 = comments_format(student_09)",
+      "expected": "copied"
+    },
+    {
+      "a": "student_05.py",
+      "b": "student_10.py",
+      "relation": "student_10 = comments_format(combined(student_05))",
+      "expected": "copied"
+    },
+    {
+      "a": "student_07.py",
+      "b": "student_11.py",
+      "relation": "student_11 = dead_code(reorder(student_07))",
+      "expected": "copied"
+    },
+    {
+      "a": "student_12.c",
+      "b": "student_13.c",
+      "relation": "student_13 = loop_swap(student_12)",
+      "expected": "copied"
+    }
+  ],
+  "involved_in_copying": [
+    "student_02.py",
+    "student_05.py",
+    "student_07.py",
+    "student_08.py",
+    "student_09.py",
+    "student_10.py",
+    "student_11.py",
+    "student_12.c",
+    "student_13.c"
+  ],
+  "note": "Every same-language pair not listed in planted_pairs is two independent honest solutions."
+}
