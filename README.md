@@ -5,9 +5,9 @@ the submissions of a whole class (Python `.py`, C `.c`/`.h`, or a `.zip` of them
 compares every pair of submissions written in the same language. It combines two independent
 signals: **token fingerprinting** (winnowing over a normalised token stream) and **structural
 comparison** of abstract syntax trees (Zhang–Shasha tree edit distance plus shared subtrees). The
-two scores are fused into one similarity score with a High / Moderate / Low verdict. Results appear
-as a heat map, a score histogram and a ranked list of pairs, and each pair opens a side-by-side view
-with the matching code highlighted. The detection engine is plain Python with no machine-learning
+two scores are fused into one similarity score with a High / Moderate / Low verdict. Findings are
+presented through a pairwise heat map, a distribution chart of the scores and a sortable table of
+pairs; opening any pair puts both files next to each other with the shared code highlighted. The detection engine is plain Python with no machine-learning
 libraries, so every formula can be followed and explained. Its decision layer is **trained** on a
 labelled dataset of 290 program pairs: the fusion weights and verdict thresholds are learned, and a
 logistic-regression model adds a probability of plagiarism to every pair, both validated with
