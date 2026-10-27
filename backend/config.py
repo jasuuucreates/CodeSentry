@@ -43,3 +43,7 @@ class DefaultConfig:
     # Optional logistic-regression model (training/train_model.py). When it exists, every pair in
     # the run and pair responses also carries scores.ml_probability (see backend/ml.py).
     TRAINED_MODEL_FILE = str(PROJECT_ROOT / "engine" / "trained_model.json")
+
+    # Outputs of training/train_model.py shown on the Model Training page (GET /api/training).
+    TRAINING_REPORT_FILE = str(PROJECT_ROOT / "training" / "results" / "training_report.json")
+    TRAINING_FEATURES_FILE = str(PROJECT_ROOT / "training" / "results" / "features.csv")

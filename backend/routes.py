@@ -349,12 +349,16 @@ def get_run(run_id: int):
             if i is not None and j is not None:
                 matrix[i][j] = matrix[j][i] = pair["scores"]["fused"]
 
+        files = [s.to_file_dict() for s in submissions]
+        config = run.config
+        threshold = config.get("moderate_threshold", EngineConfig().moderate_threshold)
         body = run.to_summary()
         body.update({
-            "files": [s.to_file_dict() for s in submissions],
+            "files": files,
             "matrix": matrix,
             "pairs": pairs,
-            "config": run.config,
+            "config": config,
+            "clusters": _clusters(files, pairs, threshold),
         })
         return jsonify(body)
 
@@ -430,6 +434,83 @@ def explain_snippets():
     except EngineError as exc:
         raise ApiError(str(exc)) from None
     return jsonify(result)
+
+
+def _clusters(files: list[dict], pairs: list[dict], threshold: float) -> list[dict]:
+    """Groups of files linked by pairs scoring at least ``threshold`` (union-find).
+
+    Two files are in the same group when a chain of suspicious pairs connects them, e.g. A copied
+    from B and C copied from A. Only groups of two or more files are returned, strongest first.
+    """
+    parent = {f["id"]: f["id"] for f in files}
+
+    def find(x: int) -> int:
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]  # path halving keeps the trees flat
+            x = parent[x]
+        return x
+
+    strong = [p for p in pairs if p["scores"]["fused"] >= threshold
+              and p["a_id"] in parent and p["b_id"] in parent]
+    for p in strong:
+        ra, rb = find(p["a_id"]), find(p["b_id"])
+        if ra != rb:
+            parent[rb] = ra
+
+    names = {f["id"]: f["name"] for f in files}
+    groups: dict[int, dict] = {}
+    for p in strong:
+        group = groups.setdefault(find(p["a_id"]), {"members": set(), "edges": []})
+        group["members"].update((p["a_id"], p["b_id"]))
+        group["edges"].append({"a_id": p["a_id"], "b_id": p["b_id"],
+                               "fused": p["scores"]["fused"], "verdict": p["verdict"]})
+    result = []
+    for group in groups.values():
+        members = sorted(group["members"], key=lambda i: names[i])
+        edges = sorted(group["edges"], key=lambda e: e["fused"], reverse=True)
+        result.append({"members": [{"id": i, "name": names[i]} for i in members],
+                       "edges": edges, "max_score": edges[0]["fused"]})
+    result.sort(key=lambda g: (-g["max_score"], g["members"][0]["name"]))
+    return result
+
+
+@api.get("/training")
+def training():
+    report_path = Path(current_app.config["TRAINING_REPORT_FILE"])
+    if not report_path.is_file():
+        raise ApiError("No training results yet. Generate them with: python training/train_model.py", 404)
+    try:
+        report = json.loads(report_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        raise ApiError(f"The training report could not be read: {exc}", 500) from None
+
+    points: list[dict] = []
+    features_path = Path(current_app.config["TRAINING_FEATURES_FILE"])
+    if features_path.is_file():
+        import csv
+        with features_path.open(newline="", encoding="utf-8") as handle:
+            for row in csv.DictReader(handle):
+                try:
+                    points.append({
+                        "token": float(row["token"]),
+                        "structure": float(row["structure"]),
+                        "label": int(float(row["label"])),
+                        "category": row.get("category", ""),
+                        "language": row.get("language", ""),
+                        "a": row.get("a", ""),
+                        "b": row.get("b", ""),
+                    })
+                except (KeyError, TypeError, ValueError):
+                    continue  # a malformed row is skipped, not fatal
+
+    trained = None
+    config_path = Path(current_app.config.get("TRAINED_CONFIG_FILE") or "")
+    if config_path.is_file():
+        try:
+            trained = json.loads(config_path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            trained = None
+    return jsonify({"report": report, "points": points, "trained": trained})
 
 
 @api.get("/evaluation")

@@ -15,6 +15,7 @@ import HowItWorks from './pages/HowItWorks.jsx'
 import NewAnalysis from './pages/NewAnalysis.jsx'
 import PairView from './pages/PairView.jsx'
 import RunResults from './pages/RunResults.jsx'
+import Training from './pages/Training.jsx'
 
 /** Shown for any URL that matches no route, instead of a blank screen. */
 function NotFound() {
@@ -40,6 +41,7 @@ export default function App() {
           <Route path="runs/:runId" element={<RunResults />} />
           <Route path="runs/:runId/pairs/:aId/:bId" element={<PairView />} />
           <Route path="evaluation" element={<Evaluation />} />
+          <Route path="training" element={<Training />} />
           <Route path="how-it-works" element={<HowItWorks />} />
           <Route path="about" element={<About />} />
           <Route path="*" element={<NotFound />} />

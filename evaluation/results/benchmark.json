@@ -1,0 +1,85 @@
+{
+  "generated_at": "2026-10-27T07:08:45+00:00",
+  "rows": [
+    {
+      "language": "python",
+      "files": 10,
+      "pairs": 45,
+      "seconds": 0.39,
+      "ms_per_pair": 8.7,
+      "lines": 871
+    },
+    {
+      "language": "python",
+      "files": 20,
+      "pairs": 190,
+      "seconds": 1.42,
+      "ms_per_pair": 7.46,
+      "lines": 1646
+    },
+    {
+      "language": "python",
+      "files": 40,
+      "pairs": 780,
+      "seconds": 5.57,
+      "ms_per_pair": 7.14,
+      "lines": 3252
+    },
+    {
+      "language": "python",
+      "files": 60,
+      "pairs": 1770,
+      "seconds": 10.73,
+      "ms_per_pair": 6.06,
+      "lines": 4701
+    },
+    {
+      "language": "python",
+      "files": 90,
+      "pairs": 4005,
+      "seconds": 26.23,
+      "ms_per_pair": 6.55,
+      "lines": 6978
+    },
+    {
+      "language": "c",
+      "files": 10,
+      "pairs": 45,
+      "seconds": 0.74,
+      "ms_per_pair": 16.47,
+      "lines": 1148
+    },
+    {
+      "language": "c",
+      "files": 20,
+      "pairs": 190,
+      "seconds": 2.46,
+      "ms_per_pair": 12.95,
+      "lines": 2119
+    },
+    {
+      "language": "c",
+      "files": 40,
+      "pairs": 780,
+      "seconds": 7.97,
+      "ms_per_pair": 10.22,
+      "lines": 4395
+    },
+    {
+      "language": "c",
+      "files": 60,
+      "pairs": 1770,
+      "seconds": 17.28,
+      "ms_per_pair": 9.76,
+      "lines": 6381
+    },
+    {
+      "language": "c",
+      "files": 90,
+      "pairs": 4005,
+      "seconds": 34.86,
+      "ms_per_pair": 8.7,
+      "lines": 9431
+    }
+  ]
+}

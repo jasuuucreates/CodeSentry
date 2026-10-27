@@ -77,6 +77,12 @@ export async function getEvaluation() {
   return response.data
 }
 
+/** GET /api/training -> {report, points, trained} from training/train_model.py */
+export async function getTraining() {
+  const response = await api.get('/training')
+  return response.data
+}
+
 /**
  * Turns any failure from the functions above into one sentence a user can read.
  * The backend reports every error as JSON {"error": "..."}, so that message is preferred; the

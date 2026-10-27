@@ -6,6 +6,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { errorMessage, getRun } from '../api/client.js'
+import CollusionGroups from '../components/CollusionGroups.jsx'
 import Heatmap from '../components/Heatmap.jsx'
 import PairsTable from '../components/PairsTable.jsx'
 import ScoreHistogram from '../components/ScoreHistogram.jsx'
@@ -36,6 +37,34 @@ function HeaderActions() {
       </Button>
     </>
   )
+}
+
+/** One CSV field: quoted when it contains a comma, quote or line break. */
+function csvField(value) {
+  const text = value === null || value === undefined ? '' : String(value)
+  return /[",\r\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text
+}
+
+/** Downloads the ranked pairs of a run as a CSV file, built in the browser (no server call). */
+function exportPairsCsv(run) {
+  const ranked = [...(run.pairs ?? [])].sort((x, y) => (y.scores?.fused ?? -1) - (x.scores?.fused ?? -1))
+  const header = ['rank', 'file_a', 'file_b', 'fused', 'token', 'structure', 'ml_probability', 'verdict']
+  const lines = [header.join(',')]
+  ranked.forEach((pair, index) => {
+    const s = pair.scores ?? {}
+    lines.push(
+      [index + 1, pair.a_name, pair.b_name, s.fused, s.token, s.structure, s.ml_probability, pair.verdict].map(csvField).join(','),
+    )
+  })
+  const blob = new Blob([lines.join('\r\n') + '\r\n'], { type: 'text/csv;charset=utf-8' })
+  const url = URL.createObjectURL(blob)
+  const link = document.createElement('a')
+  link.href = url
+  link.download = `codesentry-run-${run.id}-pairs.csv`
+  document.body.appendChild(link)
+  link.click()
+  link.remove()
+  setTimeout(() => URL.revokeObjectURL(url), 1000)
 }
 
 /** Short guide shown above the heat map, so the grid can be read without prior explanation. */
@@ -175,9 +204,34 @@ export default function RunResults() {
         </Card>
 
         <Card
+          title="Suspected collusion groups"
+          subtitle={`Files linked by pairs at or above the Moderate threshold (${Math.round((run.config?.moderate_threshold ?? 0.5) * 100)}%). A chain of similar pairs puts all of its files in one group. Click a link to compare the two files.`}
+        >
+          <CollusionGroups clusters={run.clusters ?? []} runId={run.id} config={run.config} />
+        </Card>
+
+        <Card
           title="Ranked pairs"
           subtitle="Most similar first. Filter by verdict, search by file name, sort any column, then open a pair to see the matching code."
           bodyClassName="p-0"
+          actions={
+            pairs.length > 0 ? (
+              <Button
+                variant="secondary"
+                size="sm"
+                onClick={() => exportPairsCsv(run)}
+                icon={
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4" aria-hidden="true">
+                    <path d="M12 4v11" />
+                    <path d="m7.5 10.5 4.5 4.5 4.5-4.5" />
+                    <path d="M4 19h16" />
+                  </svg>
+                }
+              >
+                Export CSV
+              </Button>
+            ) : null
+          }
         >
           <PairsTable pairs={pairs} runId={run.id} config={run.config} />
         </Card>

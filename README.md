@@ -17,6 +17,8 @@ on one computer.
 | Run results (heat map) | Side-by-side evidence |
 |---|---|
 | ![Run results](docs/screenshots/run_results.png) | ![Side-by-side view](docs/screenshots/side_by_side.png) |
+| **Suspected collusion groups** | **Model training: the learned decision boundary** |
+| ![Collusion groups](docs/screenshots/collusion_groups.png) | ![Model training](docs/screenshots/model_training.png) |
 
 ![Evaluation page](docs/screenshots/evaluation.png)
 
@@ -78,7 +80,13 @@ CodeSentry compares what does not change under these edits:
 * **Adjustable settings** for each run: k-gram length `k`, winnowing window `w`, and the
   token/structure fusion weights.
 * **Results dashboard**: summary cards, an interactive similarity **heat map**, a **histogram** of
-  scores and a sortable, filterable **ranked pairs table**.
+  scores and a sortable, filterable **ranked pairs table** that can be exported as **CSV**.
+* **Suspected collusion groups**: files linked by pairs at or above the Moderate threshold are
+  grouped with union-find, so a chain of copying (A–B, B–C) appears as one group. Each group is drawn
+  as a small network, and clicking a link opens that pair.
+* **Model Training** page: a scatter plot of all labelled pairs (token score against structure
+  score) with the learned decision boundary, the cross-validation folds, the logistic-regression
+  coefficients, and a comparison of all methods on held-out pairs.
 * **Pair view**: the two files side by side with the matched regions highlighted in the same colour
   in both files, plus a breakdown of every score (token, containment, structure, tree edit
   similarity, subtree overlap, fused) next to two naive baselines (plain text diff and TF-IDF
@@ -324,6 +332,12 @@ forwards `/api` requests to the Flask server on port 5000.
    normalised symbols, k-grams, fingerprints, skeleton trees and the final score for your input.
 6. **Evaluation**: how accurately each method separates disguised copies from honest pairs on the
    labelled dataset.
+7. **Model Training**: where the learned weights and thresholds come from. The scatter plot shows
+   every labelled pair and the learned boundary line; the tables show each cross-validation fold
+   and the scores on held-out pairs.
+
+On the Run results page, **Suspected collusion groups** shows which students are linked by
+suspicious pairs, and **Export CSV** downloads the ranked pairs for a spreadsheet.
 
 ## 9. REST API
 
@@ -337,11 +351,12 @@ with status 400 (invalid input), 404 (not found), 413 (too large) or 500.
 | POST | `/api/runs` | multipart upload: `files` (repeated; `.py`, `.c`, `.h` or `.zip`), optional `name`, `k`, `w`, `w_token`, `w_structure`. Analyses synchronously and returns **201** with a RunSummary |
 | POST | `/api/runs/demo` | analyses `dataset/demo_batch/` and returns **201** with a RunSummary (404 if the demo batch has not been built) |
 | GET | `/api/runs` | all runs (RunSummary list), newest first |
-| GET | `/api/runs/<id>` | RunSummary plus `files`, `matrix` (fused scores, `null` for pairs that were not compared), `pairs` (ranked PairResults without source text) and `config` |
+| GET | `/api/runs/<id>` | RunSummary plus `files`, `matrix` (fused scores, `null` for pairs that were not compared), `pairs` (ranked PairResults without source text), `config` and `clusters` (suspected collusion groups: `members`, `edges`, `max_score`) |
 | GET | `/api/runs/<id>/pairs/<a_id>/<b_id>` | one PairResult with `a_source` and `b_source`. The order does not matter: `/2/1` returns the same pair with the sides swapped |
 | DELETE | `/api/runs/<id>` | deletes a run with its submissions and scores (**204**) |
 | POST | `/api/explain` | JSON `{"code_a", "code_b", "language": "python" or "c"}`; returns every intermediate stage and the PairResult (400 if a snippet cannot be tokenised) |
 | GET | `/api/evaluation` | contents of `evaluation/results/evaluation.json` (404 if not generated yet) |
+| GET | `/api/training` | `report` (`training/results/training_report.json`), `points` (token and structure score, label and category of every labelled pair) and `trained` (`engine/trained_config.json`); 404 if training has not been run |
 
 A **RunSummary** has `id`, `name`, `created_at` (ISO 8601), `file_count`, `pair_count`, `high`,
 `moderate`, `low`, `max_score`, `mean_score` and `elapsed_ms`. A **PairResult** has the two file ids
@@ -425,6 +440,13 @@ skeleton (structure ≈ 0.5 even when nobody copied); the structure score still 
 copies. On the bundled demo batch the trained settings rate all six planted copies High and all 50
 honest pairs Low.
 
+**Scalability.** `python evaluation/benchmark.py` times whole batches drawn from the dataset
+(results in [`evaluation/results/benchmark.md`](evaluation/results/benchmark.md)). Every file is
+prepared once and only the comparison step grows with the number of pairs: on an ordinary laptop a
+class of 60 Python submissions (1,770 pairs) is analysed in about 11 s and 90 submissions
+(4,005 pairs) in about 26 s, roughly 6–9 ms per pair (C is about 30 % slower because of the
+tree-sitter parse and larger syntax trees).
+
 ```bash
 python dataset/build_dataset.py      # 1. generate the labelled dataset
 python evaluation/evaluate.py        # 2. compare the five methods
@@ -438,15 +460,16 @@ python run_server.py                 # 4. the app picks up the trained files at 
 pytest            # run from the project root (pytest.ini sets pythonpath and testpaths)
 ```
 
-The suite in `tests/` (88 tests) checks real behaviour of every layer: the tokenisers and
+The suite in `tests/` (92 tests) checks real behaviour of every layer: the tokenisers and
 normaliser; the winnowing rules, including the rightmost-minimum tie-break; known Zhang–Shasha
 distances; baselines and fusion; the pipeline (identical files score 1.0, a renamed copy keeps a
 token score of 1.0, unrelated programs score low, the planted demo copies rank above the honest
 pairs); the obfuscator (its output is valid code that differs from the input, it is deterministic for a
 seed, and the Python variants print the same output as the original);
 and the REST API (upload validation errors, zip handling, the run lifecycle including deletion, the
-order-insensitive pair route, the demo run and the evaluation endpoint). The API tests run against
-a temporary SQLite database through Flask's test client.
+order-insensitive pair route, the demo run, the evaluation and training endpoints, and the four
+planted collusion groups of the demo class). The API tests run against a temporary SQLite database
+through Flask's test client.
 
 ## 12. Team and license
 

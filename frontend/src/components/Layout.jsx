@@ -87,6 +87,20 @@ const NAV_SECTIONS = [
         ),
       },
       {
+        to: '/training',
+        label: 'Model Training',
+        match: (path) => path.startsWith('/training'),
+        icon: (
+          <>
+            <circle cx="6" cy="17" r="1.5" />
+            <circle cx="10" cy="11" r="1.5" />
+            <circle cx="15" cy="14" r="1.5" />
+            <circle cx="18" cy="7" r="1.5" />
+            <path d="M3 21 21 3" strokeDasharray="2 2" />
+          </>
+        ),
+      },
+      {
         to: '/how-it-works',
         label: 'How It Works',
         match: (path) => path.startsWith('/how-it-works'),
